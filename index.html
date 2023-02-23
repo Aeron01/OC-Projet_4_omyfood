@@ -21,27 +21,37 @@
     </header>
 
     <main>
-        <section class="container_search">
+        <div class="container_search">
             <form class="search_form">
                 <span class="container_icone-dot">
                     <i class="fas fa-location-dot"></i>
                 </span>
-                <input class="search_form_txt" type="text" placeholder="Paris, Belleville" />
+                <input class="search_form_txt" type="text" placeholder="Paris, Belleville"/>
             </form>
-            <div class="container_description">
-                <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
-            </div>
-            <button class="Restau_Explorer_Btn">Explorer nos restaurants</button>
+        </div>
+        <section class="container_description">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
         </section>
+        <div class="Explorer_Btn">
+            <button class="Restau_Explorer_Btn">Explorer nos restaurants</button>
+        </div>
 
         <section class="container_functioning">
             <h2>Fonctionnement</h2>
-            <div>
-                <span class="Btn-number">1</span><a class="Choose fas fa-mobile-screen-button IconeColorHow2Fuctioning"
-                    href="#">Choisissez un restaurant</a>
-                <!-- <span class="Btn-number">2</span><a class="Compose fas fa-list-ul IconeColorHow2Fuctioning" href="#">Composez votre menu</a>
-                <span class="Btn-number">3</span><a class="Eat fas fa-store IconeColorHow2Fuctioning"  href="#">Dégustez au restaurant</a> -->
+            <div class="FunctioningBtn">
+                <div>
+                    <span class="Btn-number">1</span>
+                    <button class="Choose" href="#"><i class="fas fa-mobile-screen-button IconeColorHow2Fuctioning"></i>Choisissez un restaurant</button>
+                </div>
+                <div>
+                    <span class="Btn-number">2</span>
+                    <button class="Compose" href="#"><i class="fas fa-list-ul IconeColorHow2Fuctioning"></i>Composez votre menu</button>
+                </div>
+                <div>
+                    <span class="Btn-number">3</span>
+                    <button class="Eat" href="#"><i class="fas fa-store IconeColorHow2Fuctioning"></i>Dégustez au restaurant</button>
+                </div>
             </div>
         </section>
 
@@ -55,10 +65,10 @@
                         <div class="">
                             <h3><strong>La palette du goût</strong></h3>
                             <p>Ménilmontant</p>
-                            <span>
-                                <i class="far fa-heart HeartIconesColor"></i>
-                            </span>
                         </div>
+                        <span>
+                            <i class="far fa-heart HeartIconesColor"></i>
+                        </span>
                     </a>
 
                     <a href="#" class="card">
@@ -103,9 +113,7 @@
 
     <footer>
         <section>
-            <div>
-                <img src="./Assets/Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg" alt="">
-            </div>
+            <h2>ohmyfood</h2>
             <div>
                 <a class="fas fa-utensils IconeColorFooter" href="#">Proposer un restaurant</a>
                 <a class="fas fa-handshake-angle IconeColorFooter" href="#">Devenir Partenaire</a>

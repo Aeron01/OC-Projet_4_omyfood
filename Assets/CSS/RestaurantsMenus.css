@@ -1,6 +1,6 @@
 /*--- Définitions des variables de couleurs et des polices de caractères ---*/
 
-::root {
+:root {
     --PrimaryColor: #9356DC;
     /*--- Couleur pour l'intérieur des flèches, le text du bouton "Explorez les menus", les cercles des numéros 1,2 et 3 et les iconnes quand on séléctionne dans la partie "Fonctionnement", et le dégrader ---*/
     --SecondaryColor: #FF79DA;
@@ -15,6 +15,10 @@
     /*--- pour le logo en text ---*/
     --font_text: 'Shrikhand', cursive;
     /*--- pour le text en générale ---*/
+    --BckgrndColorFooter: #353535;
+    /*--- Couleur de fond du footer ---*/
+    --SearchAndRestauBckgrndColor: #D2D2D2;
+    /*--- Couleur de fond de la recherche et de la partie restaurants ---*/
 }
 
 /*--- Remise à zéro des marges des navigateur internet ---*/
@@ -30,7 +34,7 @@ body {
     margin: 20px;
 }
 
-/*--- Partie Navigation (a mettre dans le menu resto) ---*/
+/*--- Partie Navigation ---*/
 
 .NavArrow {
     display: flex;

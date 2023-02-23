@@ -44,7 +44,7 @@ body {
 }
 
 /*--- Site font default ---*/
-h1, h2, h3, p {
+h1, h2, h3, p, a {
     font-family: var(--font_text);
 }
 
@@ -264,6 +264,7 @@ button {
     border: 2px solid red;
     padding: 25px;
     background-color: var(--SearchAndRestauBckgrndColor);
+    
 }
 
 .Section_Restaurants {
@@ -271,6 +272,7 @@ button {
     width: 100%;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 64px;
 }
 
 
@@ -311,18 +313,26 @@ button {
 footer {
     display: flex;
     flex-direction: column;
+    width: auto;
     background-color: var(--BckgrndColorFooter);
-    height: 195px;
+    height: 173px;
     padding: 22px 25px;
 }
 
 footer h2 {
     font-family: var(--font_logo);
+    padding-bottom: 16px;
 }
 
 footer a {
     font-size: 16px;
     font-weight: 500;
+}
+
+.FooterMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
 .footer_a_FontWeigth_Secondary {
@@ -334,7 +344,19 @@ footer, footer h2, footer a,
     color: #fff;
 }
 
+/*.fa-utensils {
+    padding-right: 11px;
+}
 
+.fa-handshake-angle {
+    padding-right: 10.08px;
+}*/
+
+.fa-handshake-angle, .fa-utensils {
+    /*height: 13px;
+    width: 11.92px;*/
+    padding-right: 11px;
+}
 
 /*--- Media Querie ---*/
 @media screen and (min-width:768px) {

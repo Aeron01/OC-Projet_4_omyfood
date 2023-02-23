@@ -1,24 +1,41 @@
-/*--- Définitions des variables de couleurs et des polices de caractères ---*/
+/*--- Color Variables and font style ---*/
+
 :root {
---PrimaryColor : #9356DC; /*--- Couleur pour l'intérieur des flèches, le text du bouton "Explorez les menus", les cercles des numéros 1,2 et 3 et les iconnes quand on séléctionne dans la partie "Fonctionnement", et le dégrader ---*/
---SecondaryColor : #FF79DA; /*--- 2ème couleur pour le dégrader ---*/
---TertiaryColor-Main : #99E2D0; /*--- Couleur pour le fond de "Nouveau', le fond du cercle du "+", le fond de la sélection du plat et la couleur du "coché", et la ligne sous les éléments du menu---*/
---TertiaryColor-Secondary : #008766; /*--- Couleur pour le "+" et le mot "Nouveau" ---*/
---jesaitpas1 : #89C8FA;
---jesaitpas2 : #003A68;
---font_text : 'Roboto',sans-serif;  /*--- pour le logo en text ---*/
---font_logo : 'Shrikhand',cursive;  /*--- pour le text en générale ---*/
---BckgrndColorFooter : #353535; /*--- Couleur de fond du footer ---*/
---SearchAndRestauBckgrndColor : #D2D2D2; /*--- Couleur de fond de la recherche et de la partie restaurants ---*/
+    /*--- Couleur pour l'intérieur des flèches, le text du bouton "Explorez les menus", les cercles des numéros 1,2 et 3 et les iconnes quand on séléctionne dans la partie "Fonctionnement", et le dégrader ---*/
+    --PrimaryColor: #9356DC;
+
+    /*-- 2ème couleur pour le dégrader ---*/
+    --SecondaryColor: #FF79DA;
+
+    /*--- Couleur pour le fond de "Nouveau', le fond du cercle du "+", le fond de la sélection du plat et la couleur du "coché", et la ligne sous les éléments du menu---*/
+    --TertiaryColor-Main: #99E2D0;
+
+    /*--- Couleur pour le "+" et le mot "Nouveau" ---*/
+    --TertiaryColor-Secondary: #008766;
+
+    --jesaitpas1: #89C8FA;
+    --jesaitpas2: #003A68;
+
+    /*--- pour le logo en text ---*/
+    --font_logo: 'Roboto', sans-serif;
+
+    /*--- pour le text en générale ---*/
+    --font_text: 'Shrikhand', cursive;
+
+    /*--- Couleur de fond du footer ---*/
+    --BckgrndColorFooter: #353535;
+
+    /*--- Couleur de fond de la recherche et de la partie restaurants ---*/
+    --SearchAndRestauBckgrndColor: #D2D2D2;
 }
 
-/*--- Remise à zéro des marges des navigateur internet ---*/
+/*--- Reset internet Browser ---*/
 * {
     margin: 0;
     padding: 0;
 }
 
-/*--- Marge par défaut du site ---*/
+/*--- Site margin default ---*/
 body {
     margin: 0 20px;
     color: #000000;
@@ -50,7 +67,7 @@ a {
 }
 
 
-/*--- Partie localisation ---*/
+/*--- Localisation ---*/
 .container_description {
     display: flex;
     flex-direction: column;
@@ -122,7 +139,7 @@ a {
     color: var(--text-card-and-search-color-white);
 }*/
 
-/*--- Partie bouton "Explorez nos Restaurant" ---*/
+/*--- Button "Explorez nos Restaurant" ---*/
 button {
     display: flex;
     justify-content: center;
@@ -146,25 +163,19 @@ button {
     background: linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
 }
 
-/*--- Partie bouton "Fonctionnement" ---*/
+/*--- Button "Fonctionnement" ---*/
 .container_functioning {
     display: flex;
     flex-direction: column;
 }
 
-.Btn-number {
+.Btn-number {}
 
-}
+.IconeColorHow2Fuctioning {}
 
-.IconeColorHow2Fuctioning {
+.IconeColorHow2Fuctioning:hover {}
 
-}
-
-.IconeColorHow2Fuctioning:hover {
-
-}
-
-/*--- Partie Restaurants ---*/
+/*--- Restaurants ---*/
 .Container_Restaurants {
     display: flex;
     gap: 40px;
@@ -227,7 +238,7 @@ footer a {
     font-weight: 400;
 }
 
-.IconeColorFooter{
+.IconeColorFooter {
     color: #fff;
 }
 

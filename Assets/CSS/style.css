@@ -1,0 +1,239 @@
+/*--- Définitions des variables de couleurs et des polices de caractères ---*/
+:root {
+--PrimaryColor : #9356DC; /*--- Couleur pour l'intérieur des flèches, le text du bouton "Explorez les menus", les cercles des numéros 1,2 et 3 et les iconnes quand on séléctionne dans la partie "Fonctionnement", et le dégrader ---*/
+--SecondaryColor : #FF79DA; /*--- 2ème couleur pour le dégrader ---*/
+--TertiaryColor-Main : #99E2D0; /*--- Couleur pour le fond de "Nouveau', le fond du cercle du "+", le fond de la sélection du plat et la couleur du "coché", et la ligne sous les éléments du menu---*/
+--TertiaryColor-Secondary : #008766; /*--- Couleur pour le "+" et le mot "Nouveau" ---*/
+--jesaitpas1 : #89C8FA;
+--jesaitpas2 : #003A68;
+--font_text : 'Roboto',sans-serif;  /*--- pour le logo en text ---*/
+--font_logo : 'Shrikhand',cursive;  /*--- pour le text en générale ---*/
+--BckgrndColorFooter : #353535; /*--- Couleur de fond du footer ---*/
+--SearchAndRestauBckgrndColor : #D2D2D2; /*--- Couleur de fond de la recherche et de la partie restaurants ---*/
+}
+
+/*--- Remise à zéro des marges des navigateur internet ---*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*--- Marge par défaut du site ---*/
+body {
+    margin: 0 20px;
+    color: #000000;
+}
+
+h1 h2 h3 p {
+    font-family: var(--font_text);
+}
+
+h1 h2 h3 {
+    font-weight: 700;
+}
+
+h1 h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*--- Partie localisation ---*/
+.container_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.container_description p {
+    font-size: 18px;
+}
+
+.search_form {
+    display: inline-flex;
+    width: auto;
+    height: 50px;
+}
+
+.container_icone_dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bkgrnd-color-not-obtain-stars-and-info-icon);
+    border-radius: 15px 0 0 15px;
+    width: 100%;
+    width: 50px;
+}
+
+.container_icone-dot .fa-location-dot {
+    width: 25px;
+}
+
+.container_search {
+    margin-bottom: 20px;
+}
+
+.container_search .container_description h1 {
+    margin-bottom: 10px;
+}
+
+.search_form_txt {
+    font-weight: bold;
+    width: 282px;
+    height: 100%;
+    font-size: 18px;
+    padding-left: 15px;
+    border: none;
+    border-top: 2px solid var(--bkgrnd-color-border-btn-filter);
+    border-bottom: 2px solid var(--bkgrnd-color-border-btn-filter);
+}
+
+
+.search_form_txt::placeholder {
+    color: #000000;
+}
+
+
+/*.recherche-form button {
+    width: 150px;
+    height: 50px;
+    background: var(--icones-color);
+    border-radius: 0 15px 15px 0;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.recherche-bouton-txt {
+    color: var(--text-card-and-search-color-white);
+}*/
+
+/*--- Partie bouton "Explorez nos Restaurant" ---*/
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--PrimaryColor);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font_text);
+}
+
+.Restau_Explorer_Btn {
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.Restau_Explorer_Btn:hover {
+    color: #ffffff;
+    background: linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
+}
+
+/*--- Partie bouton "Fonctionnement" ---*/
+.container_functioning {
+    display: flex;
+    flex-direction: column;
+}
+
+.Btn-number {
+
+}
+
+.IconeColorHow2Fuctioning {
+
+}
+
+.IconeColorHow2Fuctioning:hover {
+
+}
+
+/*--- Partie Restaurants ---*/
+.Container_Restaurants {
+    display: flex;
+    gap: 40px;
+    border: 2px solid red;
+}
+
+.Section_Restaurants {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px;
+    background-color: var(--SearchAndRestauBckgrndColor);
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 335px;
+    height: 250px;
+}
+
+.card {
+    width: 100%;
+    height: 231px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+/*--- Partie Footer ---*/
+footer {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-color: var(--BckgrndColorFooter);
+    height: 195px;
+}
+
+footer a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer_a_FontWeigth_Secondary {
+    font-weight: 400;
+}
+
+.IconeColorFooter{
+    color: #fff;
+}
+
+/*--- Media Querie ---*/
+@media screen and (min-width:768px) {
+    body {
+        margin: 75px;
+    }
+}

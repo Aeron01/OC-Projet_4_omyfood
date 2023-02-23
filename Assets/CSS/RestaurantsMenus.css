@@ -1,0 +1,43 @@
+/*--- Définitions des variables de couleurs et des polices de caractères ---*/
+
+::root {
+    --PrimaryColor: #9356DC;
+    /*--- Couleur pour l'intérieur des flèches, le text du bouton "Explorez les menus", les cercles des numéros 1,2 et 3 et les iconnes quand on séléctionne dans la partie "Fonctionnement", et le dégrader ---*/
+    --SecondaryColor: #FF79DA;
+    /*--- 2ème couleur pour le dégrader ---*/
+    --TertiaryColor-Main: #99E2D0;
+    /*--- Couleur pour le fond de "Nouveau', le fond du cercle du "+", le fond de la sélection du plat et la couleur du "coché", et la ligne sous les éléments du menu---*/
+    --TertiaryColor-Secondary: #008766;
+    /*--- Couleur pour le "+" et le mot "Nouveau" ---*/
+    --jesaitpas1: #89C8FA;
+    --jesaitpas2: #003A68;
+    --font_logo: 'Roboto', sans-serif;
+    /*--- pour le logo en text ---*/
+    --font_text: 'Shrikhand', cursive;
+    /*--- pour le text en générale ---*/
+}
+
+/*--- Remise à zéro des marges des navigateur internet ---*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*--- Marge par défaut du site ---*/
+
+body {
+    margin: 20px;
+}
+
+/*--- Partie Navigation (a mettre dans le menu resto) ---*/
+
+.NavArrow {
+    display: flex;
+}
+
+@media screen and (min-width:992px) {
+    body {
+        margin: 75px;
+    }
+}

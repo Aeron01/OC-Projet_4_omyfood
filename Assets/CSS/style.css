@@ -314,7 +314,7 @@ button {
 }
 
 .Container_cards__card, .card__Photo {
-    min-width: 335px;
+    max-width: 335px;
 }
 
 /*--- Partie Footer ---*/

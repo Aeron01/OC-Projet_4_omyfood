@@ -43,6 +43,10 @@ body {
     color: #000000;
 }
 
+main {
+    margin-top: 63px;
+}
+
 /*--- Site font default ---*/
 h1, h2, h3, p, a {
     font-family: var(--font_text);
@@ -71,13 +75,17 @@ a {
 
 /*--- Logo ---*/
 header {
-    min-height: 63px;
-    height: 100%;
-    width: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 63px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
 }
 
 header img {
@@ -92,7 +100,6 @@ header img {
     justify-content: center;
     width: auto;
     height: 50px;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .container_icone_dot {
@@ -118,14 +125,14 @@ header img {
 
 .search_form_txt {
     display: flex;
-    width: 150px;
-    height: 90%;
+    width: auto;
+    height: 100%;
     font-size: 16px;
     font-family: var(--font_text);
     font-weight: 500;
     padding-left: 9.25px;
     border: none;
-    background-color: #EAEAEA;
+    background-color: transparent;
 }
 
 .search_form_txt::placeholder {
@@ -229,23 +236,22 @@ button {
     font-size: 14.18px;
     font-weight: 500;
     font-family: var(--font_text);
+    transform: translateX(-12px);
 }
 
-.IconeColorHow2Fuctioning {
+.FunctioningBtn button svg {
     color: #7E7E7E;
 }
 
-.Choose:hover, .Compose:hover, .Eat:hover {
+.FunctioningBtn button:hover {
     background-color: #F5EDFF;
 }
 
-.Choose:hover .IconeColorHow2Fuctioning,
-.Compose:hover .IconeColorHow2Fuctioning,
-.Eat:hover .IconeColorHow2Fuctioning {
+.FunctioningBtn button:hover svg {
     color: var(--PrimaryColor);
 }
-
-.Choose, .Compose, .Eat {
+.FunctioningBtn button {
+    justify-content: start;
     height: 73px;
     width: 322px;
     border-radius: 20px;
@@ -256,7 +262,7 @@ button {
     font-weight: 500;
     font-family: var(--font_text);
     color: #000000;
-    gap: 27px;
+    gap: 20px;
 }
 
 /*--- Restaurants ---*/
@@ -322,15 +328,29 @@ button {
     max-width: 335px;
 }
 
-.HeartIconesSizeAndColor {
+.LikeIconesSizeAndColor {
     height: 21px;
-    width: 100%;
-    color: green;
+    width: auto;
+    position: relative;
 }
 
-.HeartIconesSizeAndColor:hover {
-    background-clip: text;
-    background: linear-gradient(200.64deg, var(--PrimaryColor)-5.2%, var(--SecondaryColor) 110.74%);
+.LikeIconesSizeAndColor .heart {
+    position: absolute;
+    right: 0;
+}
+
+.LikeIconesSizeAndColor .heart.back {
+   color: var(--PrimaryColor); 
+}
+
+.LikeIconesSizeAndColor .heart.front {
+    color: var(--SecondaryColor);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.LikeIconesSizeAndColor .heart.front:hover {
+    opacity: 1;
 }
 
 /*--- Partie Footer ---*/

@@ -294,7 +294,8 @@ button {
 }
 
 .card__Description {
-    /*display: flex;*/
+    display: flex;
+    justify-content: space-between;
     padding: 13px;
 }
 
@@ -306,10 +307,8 @@ button {
     margin-bottom: 10px;
 }
 
-.card__Description-Text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.NewBadge {
+
 }
 
 .card__Photo {
@@ -321,6 +320,17 @@ button {
 
 .Container_cards__card, .card__Photo {
     max-width: 335px;
+}
+
+.HeartIconesSizeAndColor {
+    height: 21px;
+    width: 100%;
+    color: green;
+}
+
+.HeartIconesSizeAndColor:hover {
+    background-clip: text;
+    background: linear-gradient(200.64deg, var(--PrimaryColor)-5.2%, var(--SecondaryColor) 110.74%);
 }
 
 /*--- Partie Footer ---*/

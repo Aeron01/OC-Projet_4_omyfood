@@ -92,7 +92,6 @@ header img {
     justify-content: center;
     width: auto;
     height: 50px;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .container_icone_dot {
@@ -118,8 +117,8 @@ header img {
 
 .search_form_txt {
     display: flex;
-    width: 150px;
-    height: 90%;
+    width: 252px;
+    height: 100%;
     font-size: 16px;
     font-family: var(--font_text);
     font-weight: 500;
@@ -262,6 +261,7 @@ button {
 /*--- Restaurants ---*/
 .Container_Restaurants {
     display: flex;
+    border: 2px solid red;
     padding: 25px;
     background-color: var(--SearchAndRestauBckgrndColor);
     

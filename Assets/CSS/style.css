@@ -64,11 +64,6 @@ h3 {
     font-size: 18px;
 }
 
-h4 {
-    font-weight: 500;
-    font-size: 14px;
-}
-
 p {
     font-weight: 300;
     font-size: 17px;
@@ -317,15 +312,25 @@ button {
 
 .NewBadge {
     position: absolute;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 29px;
     width: 80px;
-    border: none;
     background-color: var(--TertiaryColor-Main);
+    border: 1px solid red;
     border-radius: 2px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     color: var(--TertiaryColor-Secondary);
-    line-height: 16px;
+    z-index: 2;
+    top: 110.6%;
+    left: 68%;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.NB2 {
+    top: 143.6%;
 }
 
 .card__Photo {

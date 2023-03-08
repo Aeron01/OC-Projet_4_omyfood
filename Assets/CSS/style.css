@@ -196,11 +196,14 @@ button {
     border-radius: 25px;
     border: none;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 1.13s ease-in-out;
 }
 
 .Restau_Explorer_Btn:hover {
     color: #ffffff;
-    background: linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    transition: 1.13s ease-in-out;
 }
 
 /*--- Button "Fonctionnement" ---*/
@@ -255,9 +258,6 @@ button {
     border: none;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     background-color: var(--BckgrndDefalutColorFunctioningBtn);
-    font-size: 16px;
-    font-weight: 500;
-    font-family: var(--font_text);
     color: #000000;
     gap: 20px;
 }
@@ -318,7 +318,7 @@ button {
     height: 29px;
     width: 80px;
     background-color: var(--TertiaryColor-Main);
-    border: 1px solid red;
+    border: none;
     border-radius: 2px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     color: var(--TertiaryColor-Secondary);
@@ -355,17 +355,17 @@ button {
     right: 0;
 }
 
-.LikeIconesSizeAndColor .heart.back {
+.LikeIconesSizeAndColor .heart.checked {
    color: black; 
 }
 
-.LikeIconesSizeAndColor .heart.front {
+.LikeIconesSizeAndColor .heart.unchecked {
     color: var(--PrimaryColor);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
-.LikeIconesSizeAndColor .heart.front:hover {
+.LikeIconesSizeAndColor .heart.checked:hover {
     opacity: 1;
 }
 

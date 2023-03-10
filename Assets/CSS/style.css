@@ -189,21 +189,21 @@ button {
     font-weight: 500;
     font-family: var(--font_text);
 }
-
+/*-- ce bouton dois avoir un dégrader qui s'affiche progressivement au survol et fais l'inverse lors qu'on le quitte --*/
 .Restau_Explorer_Btn {
     width: 218px;
     height: 50px;
     border-radius: 25px;
     border: none;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    transition: 1.13s ease-in-out;
+    transition: all 1.13s ease-out;
 }
 
 .Restau_Explorer_Btn:hover {
     color: #ffffff;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-    transition: 1.13s ease-in-out;
+    transition: all 1.13s ease-out;
 }
 
 /*--- Button "Fonctionnement" ---*/
@@ -344,13 +344,14 @@ button {
     max-width: 335px;
 }
 
+/*-- l'icone de coeur est une checkbox qui dois se remplir progressivement quand on le coche et inversement --*/
 .LikeIconesSizeAndColor {
     height: 21px;
     width: auto;
     position: relative;
 }
 
-.LikeIconesSizeAndColor .heart {
+/*.LikeIconesSizeAndColor .heart {
     position: absolute;
     right: 0;
 }
@@ -365,7 +366,38 @@ button {
     transition: opacity 0.3s ease-in-out;
 }
 
-.LikeIconesSizeAndColor .heart.checked:hover {
+.LikeIconesSizeAndColor .heart.unchecked:checked {
+    opacity: 1;
+}*/
+
+label i {
+    position: absolute;
+    right: 0;
+}
+
+input[type="checkbox"].LikeCheckbox {
+    color: #000000;
+    display: none;
+    
+}
+
+input[type="checkbox"].LikeCheckbox + label::before {
+    /*font-family: "Font Awesome 6 Free";
+    content: '\f004';
+    color: #000000;*/
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: var(--PrimaryColor);
+    /*position: absolute;
+    right: 0;
+    height: 21px;
+    width: 21px;*/
+}
+
+input[type="checkbox"].LikeCheckbox:checked + label::before {
+    /*content: "\f04";*/
+    /*font-size: 50px;*/
+    
     opacity: 1;
 }
 

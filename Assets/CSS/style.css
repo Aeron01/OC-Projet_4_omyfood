@@ -204,6 +204,7 @@ button {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
     transition: all 1.13s ease-out;
+    transform: matrix(1, 0, 0, -1, 0, 0);
 }
 
 /*--- Button "Fonctionnement" ---*/

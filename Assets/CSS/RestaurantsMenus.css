@@ -31,11 +31,10 @@
 
 /*--- Reset internet Browser ---*/
 
-body {
+* {
     margin: 0;
     padding: 0;
 }
-
 
 header {
     position: fixed;
@@ -58,10 +57,23 @@ header img {
 /*--- Navigation ---*/
 .fa-arrow-left {
     height: 16px;
-    color: var(--BckgrndColorFooter);
+    color: var(--PrimaryColor);
 }
 
-.NavArrow {}
+.NavArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.NavArrow:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    transition: 0.50s;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
 
 /*--- Restaurant Title Photo ---*/
 .RestauTablePhoto {
@@ -74,7 +86,47 @@ header img {
 }
 
 /*--- Restaurant Menu Card ---*/
-.RestauMenuCard {}
+.container__RestauMenu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    background-color: var(--BckgrndDefalutColorFunctioningBtn);
+    border-radius: 30px 30px 0 0;
+    border: 1px solid red;
+}
+
+.RestauMenu {}
+.RestauMenu__title {}
+
+.RestauMenu__Menucard {
+    padding-top: 40px;
+}
+
+.Menucard--Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 5px;
+    gap: 10px;
+}
+
+.Menucard--Description {
+    /*border: 1px solid blue;*/
+    /*border-radius: 10px;*/
+    height: 69px;
+    width: 349px;
+    padding: 13px;
+
+}
+
+.Menucard--Description:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #fff;
+    transition: 0.53s;
+}
 
 /*--- Partie Footer ---*/
 footer {

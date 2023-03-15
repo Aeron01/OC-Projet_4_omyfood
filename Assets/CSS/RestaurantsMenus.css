@@ -78,54 +78,94 @@ header img {
 /*--- Restaurant Title Photo ---*/
 .RestauTablePhoto {
     margin: 0;
+    padding: 0;
+    height: 275px;
 }
 
 .RestauTablePhoto img {
     object-fit: cover;
-    height: 275px;
+    height: 100%;
+    width: 100%;
 }
 
 /*--- Restaurant Menu Card ---*/
 .container__RestauMenu {
     display: flex;
-    width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 32px;
+    width: 100%;
     background-color: var(--BckgrndDefalutColorFunctioningBtn);
-    border-radius: 30px 30px 0 0;
-    border: 1px solid red;
+}
+
+.container__RestauMenu h2 {
+    font-family: var(--font_logo);
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.title-round {
+    display: block;
+    width: 100%;
+    height: 32px;
+    border-radius: 32px 32px 0 0;
+    background-color: var(--BckgrndDefalutColorFunctioningBtn);
+    margin-top:-32px;
 }
 
 .RestauMenu {}
 .RestauMenu__title {}
 
+.repas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*padding-bottom: 40px;*/
+}
+
 .RestauMenu__Menucard {
     padding-top: 40px;
+    padding-bottom: 12px;
 }
 
 .Menucard--Card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 5px;
-    gap: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: 0.53s;
+    background-color: #fff;
+    height: 69px;
+    width: calc(100% - 40px);
 }
 
 .Menucard--Description {
-    /*border: 1px solid blue;*/
-    /*border-radius: 10px;*/
-    height: 69px;
-    width: 349px;
-    padding: 13px;
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-.Menucard--Description:hover {
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    background-color: #fff;
-    transition: 0.53s;
+.Menucard--Description .text {
+    padding-left: 20px;
+    width: calc(100% - 60px);
+    transition: width 0.3s ease-in-out;
+}
+
+.Menucard--Description strong {
+    width: 60px;
+}
+
+.Menucard--Description:hover > .text {
+    background-color: red;
+    width: calc(80% - 60px);
+}
+
+.addincart {
+    display: none;
+}
+
+.addincart:checked>* {
+    background: red;
 }
 
 /*--- Partie Footer ---*/
@@ -180,8 +220,8 @@ footer a,
     padding-right: 11px;
 }
 
-@media screen and (min-width:992px) {
+/*@media screen and (min-width:992px) {
     body {
         margin: 75px;
     }
-}
+}*/

@@ -41,16 +41,14 @@
 /*--- Site margin default ---*/
 body {
     color: #000000;
+    font-family: var(--font_text);
 }
 
 main {
     margin-top: 63px;
 }
 
-/*--- Site font default ---*/
-h1, h2, h3, h4, p, a {
-    font-family: var(--font_text);
-}
+/*--- Site font weight ---*/
 
 h1, h2, h3 {
     font-weight: 700;
@@ -172,7 +170,8 @@ header img {
     color: var(--text-card-and-search-color-white);
 }*/
 
-/*--- Button "Explorez nos Restaurant" ---*/
+/*--- Button "Explorez nos Restaurant" (ce bouton dois avoir un dégrader qui s'affiche progressivement au survol et fais l'inverse lors qu'on le quitte) --*/
+
 .Explorer_Btn {
     display: flex;
     justify-content: center;
@@ -180,32 +179,48 @@ header img {
     padding-bottom: 57px;
 }
 
-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--PrimaryColor);
-    font-size: 16px;
-    font-weight: 500;
-    font-family: var(--font_text);
-}
-/*-- ce bouton dois avoir un dégrader qui s'affiche progressivement au survol et fais l'inverse lors qu'on le quitte --*/
-.Restau_Explorer_Btn {
+.GradientBtn {
     width: 218px;
     height: 50px;
     border-radius: 25px;
     border: none;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    transition: all 1.13s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font_text);
+    transition: transform 0.5s cubic-bezier(0.2, -2, 0.8, 2);
+    overflow: hidden;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(var(--PrimaryColor) 0%, var(--PrimaryColor) 100%);
+    position: relative;
 }
 
-.Restau_Explorer_Btn:hover {
-    color: #ffffff;
+
+.GradientBtn :before {
+    position: absolute;
+    content: '';
+    opacity: 0;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-    transition: all 1.13s ease-out;
-    transform: matrix(1, 0, 0, -1, 0, 0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.25s ease-in-out;
+    z-index: -1;
 }
+
+.GradientBtn:hover {
+    transform: scale(1.1);
+}
+
+.GradientBtn:hover > :before {
+    opacity: 1;
+}
+
 
 /*--- Button "Fonctionnement" ---*/
 .container_functioning {
@@ -216,7 +231,7 @@ button {
     padding-left: 20px;
 }
 
-.FunctioningBtn {
+.FunctioningBtns {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,9 +239,14 @@ button {
     gap: 25px;
 }
 
-.Btn-number {
+.FunctioningBtn {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.FunctioningBtn .Btn-number {
+    display: flex;
     height: 24px;
     width: 24px;
     background-color: var(--PrimaryColor);
@@ -240,21 +260,22 @@ button {
     transform: translateX(-12px);
 }
 
-.FunctioningBtn button svg {
+.FunctioningBtn svg {
     color: #7E7E7E;
 }
 
-.FunctioningBtn button:hover {
+.FunctioningBtn:hover {
     background-color: #F5EDFF;
 }
 
-.FunctioningBtn button:hover svg {
+.FunctioningBtn:hover svg {
     color: var(--PrimaryColor);
 }
-.FunctioningBtn button {
+
+.FunctioningBtn {
     justify-content: start;
     height: 73px;
-    width: 322px;
+    width: calc(100% - 40px);
     border-radius: 20px;
     border: none;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -295,6 +316,31 @@ button {
     border-radius: 15px;
     background-color: #ffffff;
     color: #000000;
+    overflow: hidden;
+    position: relative;
+}
+
+.Container_cards__card.new::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    content: 'Nouveau';
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: 29px;
+    background-color: var(--TertiaryColor-Main);
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.card__Photo {
+    width: 100%;
+    height: 174px;
+    object-fit: cover;
+    object-position: 0 60%;
 }
 
 .card__Description {
@@ -311,11 +357,12 @@ button {
     margin-bottom: 10px;
 }
 
-.NewBadge {
+/*.NewBadge {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+
     height: 29px;
     width: 80px;
     background-color: var(--TertiaryColor-Main);
@@ -328,22 +375,15 @@ button {
     left: 68%;
     font-weight: 500;
     font-size: 14px;
-}
+}*/
 
 .NB2 {
     top: 143.6%;
 }
 
-.card__Photo {
-    width: 100%;
-    height: 174px;
-    object-fit: cover;
-    border-radius: 16px 16px 0 0;
-}
-
-.Container_cards__card, .card__Photo {
+/*.Container_cards__card, .card__Photo {
     max-width: 335px;
-}
+}*/
 
 /*-- l'icone de coeur est une checkbox qui dois se remplir progressivement quand on le coche et inversement --*/
 .LikeIconesSizeAndColor {
@@ -452,8 +492,8 @@ footer, footer h2, footer a,
 }
 
 /*--- Media Querie ---*/
-@media screen and (min-width:768px) {
+/*@media screen and (min-width:768px) {
     body {
         margin: 75px;
     }
-}
+}*/

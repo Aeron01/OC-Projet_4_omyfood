@@ -50,11 +50,17 @@ main {
 
 /*--- Site font weight ---*/
 
-h1, h2, h3 {
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: var(--font_logo);
+}
+
+h2, h3 {
     font-weight: 700;
 }
 
-h1, h2 {
+h2 {
     font-size: 24px;
 }
 
@@ -71,6 +77,11 @@ a {
     text-decoration: none;
 }
 
+/*--- Cursor pointer ---*/
+.GradientBtn, .NavArrow {
+    cursor: pointer;
+}
+
 /*--- Logo ---*/
 header {
     position: fixed;
@@ -84,10 +95,6 @@ header {
     background-color: white;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     z-index: 10000;
-}
-
-header img {
-    height: 33.44px;
 }
 
 /*--- Localisation ---*/
@@ -156,22 +163,7 @@ header img {
     font-size: 18px;
 }
 
-/*.recherche-form button {
-    width: 150px;
-    height: 50px;
-    background: var(--icones-color);
-    border-radius: 0 15px 15px 0;
-    border: none;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.recherche-bouton-txt {
-    color: var(--text-card-and-search-color-white);
-}*/
-
 /*--- Button "Explorez nos Restaurant" (ce bouton dois avoir un dégrader qui s'affiche progressivement au survol et fais l'inverse lors qu'on le quitte) --*/
-
 .Explorer_Btn {
     display: flex;
     justify-content: center;
@@ -193,9 +185,8 @@ header img {
     font-family: var(--font_text);
     transition: transform 0.5s cubic-bezier(0.2, -2, 0.8, 2);
     overflow: hidden;
-    cursor: pointer;
     color: #fff;
-    background: linear-gradient(var(--PrimaryColor) 0%, var(--PrimaryColor) 100%);
+    background: linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
     position: relative;
 }
 
@@ -357,25 +348,6 @@ header img {
     margin-bottom: 10px;
 }
 
-/*.NewBadge {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 29px;
-    width: 80px;
-    background-color: var(--TertiaryColor-Main);
-    border: none;
-    border-radius: 2px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    color: var(--TertiaryColor-Secondary);
-    z-index: 2;
-    top: 110.6%;
-    left: 68%;
-    font-weight: 500;
-    font-size: 14px;
-}*/
 
 .NB2 {
     top: 143.6%;
@@ -387,31 +359,32 @@ header img {
 
 /*-- l'icone de coeur est une checkbox qui dois se remplir progressivement quand on le coche et inversement --*/
 .LikeIconesSizeAndColor {
-    height: 21px;
+    /*height: 21px;*/
+    font-size: 21px;
     width: auto;
     position: relative;
 }
 
-/*.LikeIconesSizeAndColor .heart {
+.LikeIconesSizeAndColor .heart {
     position: absolute;
     right: 0;
 }
 
-.LikeIconesSizeAndColor .heart.checked {
+.LikeIconesSizeAndColor .heart.back {
    color: black; 
 }
 
-.LikeIconesSizeAndColor .heart.unchecked {
+.LikeIconesSizeAndColor .heart.front {
     color: var(--PrimaryColor);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
-.LikeIconesSizeAndColor .heart.unchecked:checked {
+.LikeIconesSizeAndColor .heart.front:hover {
     opacity: 1;
-}*/
+}
 
-label i {
+/*label i {
     position: absolute;
     right: 0;
 }
@@ -423,24 +396,14 @@ input[type="checkbox"].LikeCheckbox {
 }
 
 input[type="checkbox"].LikeCheckbox + label::before {
-    /*font-family: "Font Awesome 6 Free";
-    content: '\f004';
-    color: #000000;*/
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     color: var(--PrimaryColor);
-    /*position: absolute;
-    right: 0;
-    height: 21px;
-    width: 21px;*/
 }
 
 input[type="checkbox"].LikeCheckbox:checked + label::before {
-    /*content: "\f04";*/
-    /*font-size: 50px;*/
-    
     opacity: 1;
-}
+}*/
 
 /*--- Partie Footer ---*/
 footer {

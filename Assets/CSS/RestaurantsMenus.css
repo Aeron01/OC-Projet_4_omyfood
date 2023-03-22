@@ -127,6 +127,8 @@ header {
 .RestauMenu {
     /*padding-left: 12px;
     padding-right: 12px;*/
+    width: calc(100% - 24px);
+    
 }
 
 .LikeIconesSizeAndColor {
@@ -137,7 +139,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .Meal {
@@ -185,8 +187,13 @@ header {
 }
 
 .dish--price {
+    display: flex;
+    height: 35px;
     width: 60px;
-    text-align: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 15px;
+    /*text-align: center;*/
     /*background-color: skyblue;*/
 }
 
@@ -199,31 +206,29 @@ header {
 /*-- Add in cart --*/
 .Menucard--Description:hover>.dish--checkbox {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--TertiaryColor-Main);
+    color: #fff;
+    transition-duration: 0.3s;
 }
 
 .dish--checkbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: calc(100% - 59px);
     max-width: 59px;
     height: 100%;
     border-radius: 0px 15px 15px 0px;
-    background-color: var(--TertiaryColor-Main);
-    color: #fff;
     display: none;
-    transition: transform 0.3s cubic-bezier(0.2, -2, 0.8, 2);
-    ;
     transition: 0.3s ease-in-out;
 }
 
-.addincart {
+/*.addincart {
     display: none;
 }
 
 .addincart:checked>* {
     background-color: green;
-}
+}*/
 
 /*--- Partie Footer ---*/
 footer {

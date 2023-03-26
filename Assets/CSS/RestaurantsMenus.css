@@ -49,7 +49,7 @@ p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    direction: ltr;
+    /*direction: ltr;*/
 }
 
 header {
@@ -149,16 +149,22 @@ header {
     width: 100%;
 }
 
-.RestauMenu__Menucard {
+.RestauMenu__Menucard>p {
     padding-top: 40px;
     padding-bottom: 12px;
 }
 
-.Greenunderline {
-    position: relative;
-    top: 5px;
+.RestauMenu__Menucard>p:after {
+    display: block;
+    content: "";
+    left: 0;
+    height: 3px;
     width: 40px;
-    border-top: 3px solid var(--TertiaryColor-Main);
+    background: var(--TertiaryColor-Main);
+}
+
+.RestauMenu__Menucard:hover>p:after {
+    width: 100%;
 }
 
 .Menucard--Card {
@@ -167,9 +173,9 @@ header {
     transition: 0.53s;
     background-color: #fff;
     height: 69px;
-    max-width: 350px;
-    width: calc(100% - 10px);
+    
     cursor: pointer;
+    overflow: hidden;
 }
 
 .Menucard--Description {
@@ -178,49 +184,66 @@ header {
     align-items: center;
     width: 100%;
     height: 100%;
+    position: relative;
+    
 }
 
 .Menucard--Description .dish--title {
     padding-left: 20px;
-    width: calc(100% - 59px);
-    transition: width 0.3s ease-in-out;
+    width: calc(100% - 80px);
+    transition: width 0.4s cubic-bezier(0.2, 0.5, 0.3, 1.5);
 }
 
 .dish--price {
     display: flex;
     height: 35px;
-    width: 60px;
-    justify-content: flex-end;
+    width: auto;
+    justify-content: flex-start;
     align-items: flex-end;
-    padding-right: 15px;
+    padding-left: 10px;
     /*text-align: center;*/
     /*background-color: skyblue;*/
 }
 
-.Menucard--Description:hover>.dish--title,
-.Menucard--Description:hover>.dish--checkbox {
+.Menucard--Description:hover>.dish--title {
     /*background-color: red;*/
-    width: calc(80% - 59px);
+    width: calc(100% - 150px);
 }
 
 /*-- Add in cart --*/
 .Menucard--Description:hover>.dish--checkbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--TertiaryColor-Main);
-    color: #fff;
-    transition-duration: 0.3s;
+    transform: translateX(30px);
+}
+
+.Menucard--Description:hover>.dish--checkbox svg {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+}
+
+.dish--checkbox svg {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    transition: transform 1s;
 }
 
 .dish--checkbox {
-    width: calc(100% - 59px);
-    max-width: 59px;
-    height: 100%;
-    border-radius: 0px 15px 15px 0px;
-    display: none;
-    transition: 0.3s ease-in-out;
+    position: absolute;
+    right: 0;
+    display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100px;
+        height: 100%;
+        background-color: var(--TertiaryColor-Main);
+        color: #fff;
+    
+    transform: translateX(100px);
+    transition: 0.3s cubic-bezier(0.2,0.5,0.3, 1.5);
 }
+
+
 
 /*.addincart {
     display: none;

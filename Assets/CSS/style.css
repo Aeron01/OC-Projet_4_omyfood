@@ -82,6 +82,173 @@ a {
     cursor: pointer;
 }
 
+/*--- Loader ---*/
+/*.loader {         je n'arrive pas à arreter le loader !
+    position: fixed;
+    flex-direction: column;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.90);
+    animation: loader 0.01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+}
+
+.wineglasscenter {
+    display: flex;
+    flex-direction: row;
+}
+
+.wineglass {
+    height: 26px;
+    position: relative;
+}
+
+.wineglass:after {
+    content: '';
+    position: absolute;
+    top: 37px;
+    left: 5px;
+    width: 20px;
+    height: 2px;
+    background: #cdfffd;
+    box-shadow: 0 0 1px black;
+}
+
+.top {
+    background: #cdfffd;
+    width: 30px;
+    height: 26px;
+    border-radius: 0 0 36px 36px;
+    box-shadow: 0 0 1px black;
+}
+
+.top:before {
+    content: '';
+    position: absolute;
+    left: 2.5px;
+    bottom: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(transparent 50%, #c60000 50%);
+}
+
+.left .top:before {
+    animation: rotate2 2s linear infinite;
+}
+
+.right .top:before {
+    animation: rotate1 2s linear infinite;
+}
+
+.top:after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 12px;
+    width: 6px;
+    height: 13px;
+    background: #cdfffd;
+    box-shadow: 0 0 1px black;
+}
+
+.left {
+    display: inline-block;
+    margin-right: 10px;
+    animation: rotate1 2s cubic-bezier(.39, 1.52, .46, .92) infinite;
+}
+
+.right {
+    display: inline-block;
+    animation: rotate2 2s cubic-bezier(.39, 1.52, .46, .92) infinite;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(22deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-22deg);
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 70px;
+    height: 25px;
+    position: relative;
+    opacity: 0;
+    animation: 2s fadeInUp infinite linear 2s;
+}
+
+li {
+    width: 6px;
+    height: 15px;
+    background: black;
+    position: absolute;
+    box-shadow: 0 0 1px black;
+    transform-origin: bottom;
+}
+
+li:nth-child(1) {
+    left: 26px;
+    bottom: 5px;
+    transform: rotate(-35deg);
+}
+
+li:nth-child(2) {
+    left: 34px;
+    bottom: 8px;
+}
+
+li:nth-child(3) {
+    left: 42px;
+    bottom: 5px;
+    transform: rotate(35deg);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: scaleY(1);
+    }
+
+    33% {
+        opacity: 1;
+        transform: scaleY(1.4);
+    }
+
+    64% {
+        opacity: .1;
+        transform: scaleY(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scaleY(.3);
+    }
+}*/
+
 /*--- Logo ---*/
 header {
     position: fixed;
@@ -94,7 +261,7 @@ header {
     align-items: center;
     background-color: white;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    z-index: 10000;
+    z-index: 9000;
 }
 
 /*--- Localisation ---*/
@@ -360,27 +527,29 @@ header {
 /*-- l'icone de coeur est une checkbox qui dois se remplir progressivement quand on le coche et inversement --*/
 .LikeIconesSizeAndColor {
     /*height: 21px;*/
-    font-size: 21px;
+    font-size: 32px;
     width: auto;
     position: relative;
 }
+
 
 .LikeIconesSizeAndColor .heart {
     position: absolute;
     right: 0;
 }
 
-.LikeIconesSizeAndColor .heart.back {
-   color: black; 
+.LikeIconesSizeAndColor .heart.back {  
+    color: black;
 }
 
 .LikeIconesSizeAndColor .heart.front {
-    color: var(--PrimaryColor);
+    color: var(--SecondaryColor);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
-.LikeIconesSizeAndColor .heart.front:hover {
+.LikeIconesSizeAndColor .heart.front:hover {   
+    color: var(--PrimaryColor);
     opacity: 1;
 }
 

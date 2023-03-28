@@ -478,6 +478,11 @@ header {
     position: relative;
 }
 
+.Container_cards__card:hover {
+    scale: 102%;
+    box-shadow: 0px 10px 10px 15px rgba(0, 0, 0, 0.15);
+}
+
 .Container_cards__card.new::after {
     display: flex;
     justify-content: center;
@@ -551,6 +556,7 @@ header {
 .LikeIconesSizeAndColor .heart.front:hover {   
     color: var(--PrimaryColor);
     opacity: 1;
+    cursor: pointer;
 }
 
 /*label i {

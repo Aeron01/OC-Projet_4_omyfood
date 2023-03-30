@@ -1,23 +1,46 @@
-* {
-    margin: 0;
-    padding: 0;
+:root {
+    --looder-animation-length : 2s;
 }
 
-body {
+.loader {
     position: fixed;
     flex-direction: column;
     z-index: 10000;
     top: 0;
     left: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.90);
-    /*animation: loader 0.01s;
-    animation-delay: 1.75s;
-    animation-fill-mode: both;*/
+    background-color: rgba(255, 255, 255, 0.90);
+    opacity: 1;
+    animation:  3s loader forwards;
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.wineglasscenter {
+    display: flex;
+    flex-direction: row;
 }
 
 .wineglass {
@@ -33,7 +56,7 @@ body {
     width: 20px;
     height: 2px;
     background: #cdfffd;
-    box-shadow: 0 0 1px white;
+    box-shadow: 0 0 1px black;
 }
 
 .top {
@@ -41,7 +64,7 @@ body {
     width: 30px;
     height: 26px;
     border-radius: 0 0 36px 36px;
-    box-shadow: 0 0 1px white;
+    box-shadow: 0 0 1px black;
 }
 
 .top:before {
@@ -56,11 +79,11 @@ body {
 }
 
 .left .top:before {
-    animation: rotate2 2s linear infinite;
+    animation: rotate2 1s linear infinite;
 }
 
 .right .top:before {
-    animation: rotate1 2s linear infinite;
+    animation: rotate1 1s linear infinite;
 }
 
 .top:after {
@@ -71,18 +94,18 @@ body {
     width: 6px;
     height: 13px;
     background: #cdfffd;
-    box-shadow: 0 0 1px white;
+    box-shadow: 0 0 1px black;
 }
 
 .left {
     display: inline-block;
     margin-right: 10px;
-    animation: rotate1 2s cubic-bezier(.39, 1.52, .46, .92) infinite;
+    animation: rotate1 1s cubic-bezier(.39, 1.52, .46, .92) infinite;
 }
 
 .right {
     display: inline-block;
-    animation: rotate2 2s cubic-bezier(.39, 1.52, .46, .92) infinite;
+    animation: rotate2 1s cubic-bezier(.39, 1.52, .46, .92) infinite;
 }
 
 @keyframes rotate1 {
@@ -113,15 +136,15 @@ ul {
     height: 25px;
     position: relative;
     opacity: 0;
-    animation: 2s fadeInUp infinite linear 2s;
+    animation: 1s fadeInUp ;
 }
 
 li {
     width: 6px;
     height: 15px;
-    background: white;
+    background: black;
     position: absolute;
-    box-shadow: 0 0 1px white;
+    box-shadow: 0 0 1px black;
     transform-origin: bottom;
 }
 

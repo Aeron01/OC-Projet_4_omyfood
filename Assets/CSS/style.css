@@ -83,7 +83,7 @@ a {
 }
 
 /*--- Loader ---*/
-/*.loader {         je n'arrive pas à arreter le loader !
+.loader {
     position: fixed;
     flex-direction: column;
     z-index: 10000;
@@ -98,6 +98,7 @@ a {
     animation: loader 0.01s;
     animation-delay: 1.75s;
     animation-fill-mode: both;
+    animation-duration: 3s;
 }
 
 .wineglasscenter {
@@ -141,11 +142,11 @@ a {
 }
 
 .left .top:before {
-    animation: rotate2 2s linear infinite;
+    animation: rotate2 2s linear 2s;
 }
 
 .right .top:before {
-    animation: rotate1 2s linear infinite;
+    animation: rotate1 2s linear 2s;
 }
 
 .top:after {
@@ -162,12 +163,12 @@ a {
 .left {
     display: inline-block;
     margin-right: 10px;
-    animation: rotate1 2s cubic-bezier(.39, 1.52, .46, .92) infinite;
+    animation: rotate1 2s cubic-bezier(.39, 1.52, .46, .92) 2s;
 }
 
 .right {
     display: inline-block;
-    animation: rotate2 2s cubic-bezier(.39, 1.52, .46, .92) infinite;
+    animation: rotate2 2s cubic-bezier(.39, 1.52, .46, .92) 2s;
 }
 
 @keyframes rotate1 {
@@ -198,7 +199,7 @@ ul {
     height: 25px;
     position: relative;
     opacity: 0;
-    animation: 2s fadeInUp infinite linear 2s;
+    animation: 3s fadeInUp linear 2s;
 }
 
 li {
@@ -247,7 +248,7 @@ li:nth-child(3) {
         opacity: 0;
         transform: scaleY(.3);
     }
-}*/
+}
 
 /*--- Logo ---*/
 header {
@@ -257,11 +258,38 @@ header {
     height: 63px;
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: white;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     z-index: 9000;
+}
+
+/*--- Navigation ---*/
+
+.fa-arrow-left {
+    font-size: 22px;
+    color: var(--PrimaryColor);
+}
+
+.NavArrow {
+    position: absolute;
+    left: 12px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    transition: transform 0.5s cubic-bezier(0.2, -2, 0.8, 2);
+    transition: 0.150s ease-in-out;
+}
+
+.NavArrow:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transform: scale(1.1);
 }
 
 /*--- Localisation ---*/
@@ -330,7 +358,7 @@ header {
     font-size: 18px;
 }
 
-/*--- Button "Explorez nos Restaurant" (ce bouton dois avoir un dégrader qui s'affiche progressivement au survol et fais l'inverse lors qu'on le quitte) --*/
+/*--- Button "Explorez nos Restaurant" ---*/
 .Explorer_Btn {
     display: flex;
     justify-content: center;
@@ -525,13 +553,7 @@ header {
     top: 143.6%;
 }
 
-/*.Container_cards__card, .card__Photo {
-    max-width: 335px;
-}*/
-
-/*-- l'icone de coeur est une checkbox qui dois se remplir progressivement quand on le coche et inversement --*/
 .LikeIconesSizeAndColor {
-    /*height: 21px;*/
     font-size: 32px;
     width: auto;
     position: relative;
@@ -615,13 +637,6 @@ footer, footer h2, footer a,
     color: #fff;
 }
 
-/*.fa-utensils {
-    padding-right: 11px;
-}
-
-.fa-handshake-angle {
-    padding-right: 10.08px;
-}*/
 
 .fa-handshake-angle, .fa-utensils {
     /*height: 13px;

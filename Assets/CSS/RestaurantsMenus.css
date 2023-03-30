@@ -49,42 +49,14 @@ p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    /*direction: ltr;*/
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
 /*--- Navigation ---*/
-
-.fa-arrow-left {
-    font-size: 22px;
-    color: var(--PrimaryColor);
-}
-
 .NavArrow {
-    position: absolute;
-    left: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 25px;
-    border: none;
-    transition: transform 0.5s cubic-bezier(0.2, -2, 0.8, 2);
-    transition: 0.150s ease-in-out;
+    display: flex;    
 }
 
-.NavArrow:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    transform: scale(1.1);
-    /*transform: rotateX(360deg);*/
-}
 
 /*--- Restaurant Title Photo ---*/
 .RestauTablePhoto {
@@ -125,14 +97,8 @@ header {
 }
 
 .RestauMenu {
-    /*padding-left: 12px;
-    padding-right: 12px;*/
     width: calc(100% - 24px);
     
-}
-
-.LikeIconesSizeAndColor {
-    height: 21px;
 }
 
 .RestauMenu__title {
@@ -142,11 +108,13 @@ header {
     justify-content: space-between;
 }
 
-.Meal {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
+.LikeIconesSizeAndColor {
+    height: 21px;
+}
+
+.RestauMenu__Menucard:hover {
+    transform: scale(102%);
+    transition: 0.3s ease-in-out;
 }
 
 .RestauMenu__Menucard>p {
@@ -157,15 +125,24 @@ header {
 .RestauMenu__Menucard>p:after {
     display: block;
     content: "";
-    left: 0;
+    /*left: 0;*/
     height: 3px;
     width: 40px;
     background: var(--TertiaryColor-Main);
+    transition: 0.3s ease-in-out;
 }
 
 .RestauMenu__Menucard:hover>p:after {
     width: 100%;
 }
+
+.Meal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
 
 .Menucard--Card {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -205,6 +182,30 @@ header {
     /*background-color: skyblue;*/
 }
 
+.dish--checkbox {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+    background-color: var(--TertiaryColor-Main);
+    color: #fff;
+
+    transform: translateX(100px);
+    transition: 0.3s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+}
+
+.dish--checkbox svg {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    transition: transform 1s;
+}
+
 .Menucard--Description:hover>.dish--title {
     /*background-color: red;*/
     width: calc(100% - 150px);
@@ -219,42 +220,9 @@ header {
     transform: translate(-50%, -50%) rotateZ(360deg);
 }
 
-.dish--checkbox svg {
-    position: absolute;
-    left: 35px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
-    transition: transform 1s;
-}
-
-.dish--checkbox {
-    position: absolute;
-    right: 0;
-    display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100px;
-        height: 100%;
-        background-color: var(--TertiaryColor-Main);
-        color: #fff;
-    
-    transform: translateX(100px);
-    transition: 0.3s cubic-bezier(0.2,0.5,0.3, 1.5);
-}
-
-
-
-/*.addincart {
-    display: none;
-}
-
-.addincart:checked>* {
-    background-color: green;
-}*/
 
 /*--- Partie Footer ---*/
-footer {
+/*footer {
     display: flex;
     flex-direction: column;
     width: auto;
@@ -290,20 +258,12 @@ footer a,
     color: #fff;
 }
 
-/*.fa-utensils {
-    padding-right: 11px;
-}
-
-.fa-handshake-angle {
-    padding-right: 10.08px;
-}*/
-
 .fa-handshake-angle,
-.fa-utensils {
+.fa-utensils {*/
     /*height: 13px;
     width: 11.92px;*/
-    padding-right: 11px;
-}
+    /*padding-right: 11px;
+}*/
 
 /*@media screen and (min-width:992px) {
     body {

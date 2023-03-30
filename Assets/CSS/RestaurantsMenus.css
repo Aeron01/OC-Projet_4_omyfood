@@ -84,12 +84,12 @@ p {
     }
 }
 
-#cardloader-1,
-#cardloader-2,
-#cardloader-3 {
+.RestauMenu__Menucard {
+    opacity: 0;
     animation-name: cardpagesloader;
     animation-duration: 800ms;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
     /*animation-iteration-count: 1;*/
 }
 
@@ -103,18 +103,6 @@ p {
 
 #cardloader-3 {
     animation-delay: 0.65s;
-}
-
-
-#cardloader-1,
-#cardloader-2,
-#cardloader-3::before {
-    opacity: 0;
-}
-
-
-#cardloader-1, #cardloader-2, #cardloader-3:after {
-    opacity: 1;
 }
 
 /*--- Restaurant Menu Card ---*/
@@ -158,9 +146,12 @@ p {
     height: 21px;
 }
 
-.RestauMenu__Menucard:hover {
+.RestauMenu__Menucard .Meal:hover {
     transform: scale(102%);
     transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .RestauMenu__Menucard>p {

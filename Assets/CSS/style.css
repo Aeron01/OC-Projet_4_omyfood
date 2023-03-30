@@ -83,7 +83,7 @@ a {
 }
 
 /*--- Loader ---*/
-/*
+
 .loader {
     position: fixed;
     flex-direction: column;
@@ -142,11 +142,11 @@ a {
 }
 
 .left .top:before {
-    animation: rotate2 2s linear 2s;
+    animation: rotate2 1s linear;
 }
 
 .right .top:before {
-    animation: rotate1 2s linear 2s;
+    animation: rotate1 1s linear;
 }
 
 .top:after {
@@ -163,12 +163,12 @@ a {
 .left {
     display: inline-block;
     margin-right: 10px;
-    animation: rotate1 2s cubic-bezier(.39, 1.52, .46, .92) 2s;
+    animation: rotate1 1s cubic-bezier(.39, 1.52, .46, .92) 2s;
 }
 
 .right {
     display: inline-block;
-    animation: rotate2 2s cubic-bezier(.39, 1.52, .46, .92) 2s;
+    animation: rotate2 1s cubic-bezier(.39, 1.52, .46, .92) 2s;
 }
 
 @keyframes rotate1 {
@@ -199,7 +199,7 @@ ul {
     height: 25px;
     position: relative;
     opacity: 0;
-    animation: 3s fadeInUp linear 2s;
+    animation: 1s fadeInUp linear;
 }
 
 li {
@@ -249,7 +249,7 @@ li:nth-child(3) {
         transform: scaleY(.3);
     }
 }
-*/
+
 
 /*--- Logo ---*/
 header {

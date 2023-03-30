@@ -84,7 +84,7 @@ p {
     }
 }
 
-.RestauMenu__Menucard {
+.Mealsection {
     opacity: 0;
     animation-name: cardpagesloader;
     animation-duration: 800ms;
@@ -115,7 +115,7 @@ p {
     background-color: var(--BckgrndDefalutColorFunctioningBtn);
 }
 
-.container__RestauMenu h2 {
+.container__RestauMenu .title {
     font-family: var(--font_logo);
     font-weight: 400;
     font-size: 28px;
@@ -135,18 +135,18 @@ p {
     
 }
 
-.RestauMenu__title {
+.heading {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-.LikeIconesSizeAndColor {
+.LikeIcon {
     height: 21px;
 }
 
-.RestauMenu__Menucard .Meal:hover {
+.Mealsection .Meal:hover {
     transform: scale(102%);
     transition: 0.3s ease-in-out;
     box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.05);
@@ -154,12 +154,12 @@ p {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.RestauMenu__Menucard>p {
+.Mealsection>p {
     padding-top: 40px;
     padding-bottom: 12px;
 }
 
-.RestauMenu__Menucard>p:after {
+.Mealsection>p:after {
     display: block;
     content: "";
     /*left: 0;*/
@@ -169,7 +169,7 @@ p {
     transition: 0.3s ease-in-out;
 }
 
-.RestauMenu__Menucard:hover>p:after {
+.Mealsection:hover>p:after {
     width: 100%;
 }
 
@@ -181,7 +181,7 @@ p {
 }
 
 
-.Menucard--Card {
+.label {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     transition: 0.53s;
@@ -192,7 +192,7 @@ p {
     overflow: hidden;
 }
 
-.Menucard--Description {
+.label .content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -202,13 +202,13 @@ p {
     
 }
 
-.Menucard--Description .dish--title {
+.content .title {
     padding-left: 20px;
     width: calc(100% - 80px);
     transition: width 0.4s cubic-bezier(0.2, 0.5, 0.3, 1.5);
 }
 
-.dish--price {
+.content .price {
     display: flex;
     height: 35px;
     width: auto;
@@ -219,7 +219,7 @@ p {
     /*background-color: skyblue;*/
 }
 
-.dish--checkbox {
+.content .checkbox {
     position: absolute;
     right: 0;
     display: flex;
@@ -234,7 +234,7 @@ p {
     transition: 0.3s cubic-bezier(0.2, 0.5, 0.3, 1.5);
 }
 
-.dish--checkbox svg {
+.content .checkbox svg {
     position: absolute;
     left: 35px;
     top: 50%;
@@ -243,17 +243,17 @@ p {
     transition: transform 1s;
 }
 
-.Menucard--Description:hover>.dish--title {
+.label:hover>.title {
     /*background-color: red;*/
     width: calc(100% - 150px);
 }
 
 /*-- Add in cart --*/
-.Menucard--Description:hover>.dish--checkbox {
+.label:hover>.checkbox {
     transform: translateX(30px);
 }
 
-.Menucard--Description:hover>.dish--checkbox svg {
+.label:hover>.checkbox svg {
     transform: translate(-50%, -50%) rotateZ(360deg);
 }
 

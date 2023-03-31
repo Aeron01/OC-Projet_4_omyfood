@@ -1,0 +1,398 @@
+@charset "UTF-8";
+/*--- Color Variables and font style ---*/
+:root {
+  /*--- Couleur pour l'intérieur des flèches, le text du bouton "Explorez les menus", les cercles des numéros 1,2 et 3 et les iconnes quand on séléctionne dans la partie "Fonctionnement", et le dégrader ---*/
+  --PrimaryColor: #9356DC;
+  /*-- 2ème couleur pour le dégrader ---*/
+  --SecondaryColor: #FF79DA;
+  /*--- Couleur pour le fond de "Nouveau', le fond du cercle du "+", le fond de la sélection du plat et la couleur du "coché", et la ligne sous les éléments du menu---*/
+  --TertiaryColor-Main: #99E2D0;
+  /*--- Couleur pour le "+" et le mot "Nouveau" ---*/
+  --TertiaryColor-Secondary: #008766;
+  --jesaitpas1: #89C8FA;
+  --jesaitpas2: #003A68;
+  /*--- pour le logo en text ---*/
+  --font_text: "Roboto", sans-serif;
+  /*--- pour le text en générale ---*/
+  --font_logo: "Shrikhand", cursive;
+  /*--- Couleur de fond du footer ---*/
+  --BckgrndColorFooter: #353535;
+  /*--- Couleur de fond de la recherche et de la partie restaurants ---*/
+  --SearchAndRestauBckgrndColor: #D2D2D2;
+  /*--- ---*/
+  --BckgrndDefalutColorFunctioningBtn: #F7F7F7;
+}
+
+/*--- Button "Explorez nos Restaurant" ---*/
+.button {
+  display: flex;
+  justify-content: center;
+  padding-top: 27px;
+  padding-bottom: 57px;
+}
+.button .GradientBtn {
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font_text);
+  transition: transform 0.5s cubic-bezier(0.2, -2, 0.8, 2);
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
+  position: relative;
+  cursor: pointer;
+}
+.button .GradientBtn :before {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.25s ease-in-out;
+  z-index: -1;
+}
+.button .GradientBtn:hover {
+  transform: scale(1.1);
+}
+.button .GradientBtn:hover > :before {
+  opacity: 1;
+}
+
+.LikeIcon {
+  font-size: 32px;
+  width: auto;
+  position: relative;
+}
+.LikeIcon .heart {
+  position: absolute;
+  right: 0;
+}
+.LikeIcon .heart.back {
+  color: black;
+}
+.LikeIcon .heart.front {
+  color: var(--SecondaryColor);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.LikeIcon .heart.front:hover {
+  color: var(--PrimaryColor);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.cards .card {
+  width: 100%;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background-color: #ffffff;
+  color: #000000;
+  overflow: hidden;
+  position: relative;
+  transition: 0.25s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+}
+.cards .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 20px 15px rgba(0, 0, 0, 0.15);
+}
+.cards .card .photo {
+  width: 100%;
+  height: 174px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 60%;
+     object-position: 0 60%;
+}
+.cards .card .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px;
+}
+.cards .card .description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cards .card .description .title {
+  font-family: var(--font_logo);
+  margin-bottom: 5px;
+}
+.cards .card .description .localisation {
+  margin-bottom: 10px;
+}
+.cards .card.new::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  content: "Nouveau";
+  top: 10px;
+  right: 10px;
+  width: 80px;
+  height: 29px;
+  background-color: var(--TertiaryColor-Main);
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+/*--- Header ---*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 63px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 9000;
+  /*--- Navigation ---*/
+}
+header .NavArrow {
+  position: absolute;
+  left: 12px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  transition: transform 0.5s cubic-bezier(0.2, -2, 0.8, 2);
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+header .NavArrow:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1);
+}
+header .fa-arrow-left {
+  font-size: 22px;
+  color: var(--PrimaryColor);
+}
+
+/*--- Footer ---*/
+footer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  background-color: var(--BckgrndColorFooter);
+  height: 173px;
+  padding: 22px 25px;
+}
+
+footer h2 {
+  font-family: var(--font_logo);
+  padding-bottom: 16px;
+}
+
+footer a {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.FooterMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer_a_FontWeigth_Secondary {
+  font-weight: 400;
+}
+
+footer,
+footer h2,
+footer a,
+.IconeColorFooter {
+  color: #fff;
+}
+
+.fa-handshake-angle,
+.fa-utensils {
+  padding-right: 11px;
+}
+
+/*--- Reset internet Browser ---*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*--- Site margin default ---*/
+body {
+  color: #000000;
+  font-family: var(--font_text);
+}
+
+main {
+  margin-top: 63px;
+}
+
+/*--- Site font weight ---*/
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: var(--font_logo);
+}
+
+h2, h3 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*--- Localisation ---*/
+.container_search {
+  margin-bottom: 10px;
+  background-color: #EAEAEA;
+}
+.container_search .search_form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 50px;
+}
+.container_search .search_form_txt {
+  display: flex;
+  width: auto;
+  height: 100%;
+  font-size: 16px;
+  font-family: var(--font_text);
+  font-weight: 500;
+  padding-left: 9.25px;
+  border: none;
+  background-color: transparent;
+}
+.container_search .search_form_txt::-moz-placeholder {
+  color: #000000;
+}
+.container_search .search_form_txt::placeholder {
+  color: #000000;
+}
+.container_search .search_form_loc .fa-location-dot {
+  padding-right: 16px;
+}
+
+.container_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.container_description .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 68px;
+  width: 60%;
+}
+.container_description .content {
+  height: 46px;
+  font-size: 18px;
+}
+
+/*--- Button "Fonctionnement" ---*/
+.container_functioning {
+  height: 440px;
+}
+.container_functioning .title {
+  padding-left: 20px;
+}
+.container_functioning .FunctioningBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.container_functioning .FunctioningBtn {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 73px;
+  width: calc(100% - 40px);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: var(--BckgrndDefalutColorFunctioningBtn);
+  color: #000000;
+  gap: 20px;
+}
+.container_functioning .FunctioningBtn .Btn-number {
+  display: flex;
+  height: 24px;
+  width: 24px;
+  background-color: var(--PrimaryColor);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 14.18px;
+  font-weight: 500;
+  font-family: var(--font_text);
+  transform: translateX(-12px);
+}
+.container_functioning .FunctioningBtn :hover {
+  background-color: #F5EDFF;
+}
+.container_functioning .FunctioningBtn :hover svg {
+  color: var(--PrimaryColor);
+}
+.container_functioning .FunctioningBtn svg {
+  color: #7E7E7E;
+}
+
+/*--- Restaurants ---*/
+.Container_Restaurants {
+  display: flex;
+  padding: 25px;
+  background-color: var(--SearchAndRestauBckgrndColor);
+}
+.Container_Restaurants .Section_Restaurants {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 64px;
+}
+.Container_Restaurants .Section_Restaurants__Container_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: auto;
+}/*# sourceMappingURL=style.css.map */

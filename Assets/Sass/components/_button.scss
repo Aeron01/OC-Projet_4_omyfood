@@ -1,0 +1,49 @@
+/*--- Button "Explorez nos Restaurant" ---*/
+.button {
+    display: flex;
+    justify-content: center;
+    padding-top: 27px;
+    padding-bottom: 57px;
+
+
+    & .GradientBtn {
+        width: 218px;
+        height: 50px;
+        border-radius: 25px;
+        border: none;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: var(--font_text);
+        transition: transform 0.5s cubic-bezier(0.2, -2, 0.8, 2);
+        overflow: hidden;
+        color: #fff;
+        background: linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
+        position: relative;
+        cursor: pointer;
+    
+        & :before {
+            position: absolute;
+            content: '';
+            opacity: 0;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.25s ease-in-out;
+            z-index: -1;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+
+            & > :before {
+                opacity: 1;
+            }
+        }
+    }
+}

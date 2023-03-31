@@ -1,0 +1,42 @@
+/*--- Footer ---*/
+footer {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: var(--BckgrndColorFooter);
+    height: 173px;
+    padding: 22px 25px;
+}
+
+footer h2 {
+    font-family: var(--font_logo);
+    padding-bottom: 16px;
+}
+
+footer a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.FooterMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer_a_FontWeigth_Secondary {
+    font-weight: 400;
+}
+
+footer,
+footer h2,
+footer a,
+.IconeColorFooter {
+    color: #fff;
+}
+
+
+.fa-handshake-angle,
+.fa-utensils {
+    padding-right: 11px;
+}

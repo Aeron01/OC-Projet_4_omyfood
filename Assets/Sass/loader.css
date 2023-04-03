@@ -1,3 +1,4 @@
+/*--- Loader ---*/
 .loader {
   position: fixed;
   flex-direction: column;
@@ -11,7 +12,8 @@
   align-items: center;
   background-color: rgba(255, 255, 255, 0.9);
   opacity: 1;
-  animation: 1.5 loader forwards;
+  animation: 2s loader forwards;
+  animation-delay: 0.2s;
 }
 @keyframes loader {
   0% {
@@ -27,22 +29,6 @@
   100% {
     opacity: 0;
     transform: scale(0);
-  }
-}
-@keyframes rotate1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(22deg);
-  }
-}
-@keyframes rotate2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-22deg);
   }
 }
 @keyframes fadeInUp {
@@ -61,6 +47,22 @@
   100% {
     opacity: 0;
     transform: scaleY(0.3);
+  }
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(22deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-22deg);
   }
 }
 .loader .wineglass {
@@ -88,16 +90,6 @@
   border-radius: 0 0 36px 36px;
   box-shadow: 0 0 1px black;
 }
-.loader .wineglass .top:before {
-  content: "";
-  position: absolute;
-  left: 2.5px;
-  bottom: 2px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: linear-gradient(transparent 50%, #c60000 50%);
-}
 .loader .wineglass .top:after {
   content: "";
   position: absolute;
@@ -108,20 +100,30 @@
   background: #cdfffd;
   box-shadow: 0 0 1px black;
 }
-.loader .wineglass .left {
+.loader .wineglass .top:before {
+  content: "";
+  position: absolute;
+  left: 2.5px;
+  bottom: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(transparent 50%, #c60000 50%);
+}
+.loader .wineglass.left {
   display: inline-block;
   margin-right: 10px;
-  animation: rotate1 1.5 cubic-bezier(0.39, 1.52, 0.46, 0.92) infinite;
+  animation: rotate1 1.5s cubic-bezier(0.39, 1.52, 0.46, 0.92) infinite;
 }
-.loader .wineglass .left .top:before {
-  animation: rotate2 1.5 linear infinite;
+.loader .wineglass.left .top:before {
+  animation: rotate2 1.5s infinite;
 }
-.loader .wineglass .right {
+.loader .wineglass.right {
   display: inline-block;
-  animation: rotate2 1.5 cubic-bezier(0.39, 1.52, 0.46, 0.92) infinite;
+  animation: rotate2 1.5s cubic-bezier(0.39, 1.52, 0.46, 0.92) infinite;
 }
-.loader .wineglass .right .top:before {
-  animation: rotate1 1.5 linear infinite;
+.loader .wineglass.right .top:before {
+  animation: rotate1 1.5s infinite;
 }
 .loader ul {
   list-style: none;
@@ -131,7 +133,7 @@
   height: 25px;
   position: relative;
   opacity: 0;
-  animation: 1.5 fadeInUp infinite;
+  animation: 1.5s fadeInUp infinite;
 }
 .loader li {
   width: 6px;

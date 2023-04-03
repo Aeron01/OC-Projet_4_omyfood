@@ -1,40 +1,6 @@
-/*--- Color Variables and font style ---*/
 
-:root {
-    /*--- Couleur pour l'intérieur des flèches, le text du bouton "Explorez les menus", les cercles des numéros 1,2 et 3 et les iconnes quand on séléctionne dans la partie "Fonctionnement", et le dégrader ---*/
-    --PrimaryColor: #9356DC;
 
-    /*-- 2ème couleur pour le dégrader ---*/
-    --SecondaryColor: #FF79DA;
-
-    /*--- Couleur pour le fond de "Nouveau', le fond du cercle du "+", le fond de la sélection du plat et la couleur du "coché", et la ligne sous les éléments du menu---*/
-    --TertiaryColor-Main: #99E2D0;
-
-    /*--- Couleur pour le "+" et le mot "Nouveau" ---*/
-    --TertiaryColor-Secondary: #008766;
-
-    --jesaitpas1: #89C8FA;
-    --jesaitpas2: #003A68;
-
-    /*--- pour le logo en text ---*/
-    --font_text: 'Roboto', sans-serif;
-
-    /*--- pour le text en générale ---*/
-    --font_logo: 'Shrikhand', cursive;
-
-    /*--- Couleur de fond du footer ---*/
-    --BckgrndColorFooter: #353535;
-
-    /*--- Couleur de fond de la recherche et de la partie restaurants ---*/
-    --SearchAndRestauBckgrndColor: #D2D2D2;
-}
-
-/*--- Reset internet Browser ---*/
-
-* {
-    margin: 0;
-    padding: 0;
-}
+/*--- Restaurants page unique style ---*/
 
 h3 {
     font-size: 17px;
@@ -53,7 +19,7 @@ p {
 
 
 /*--- Navigation ---*/
-.NavArrow {
+header .NavArrow {
     display: flex;
 }
 
@@ -122,7 +88,6 @@ p {
     & .heading {
         display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
 
         & .title {
@@ -130,27 +95,31 @@ p {
             font-weight: 400;
             font-size: 28px;
         }
+
+        & .heart {
+            right: 22px;
+        }
     }
 }
 
-.MealSection {
+.Mealsection {
     opacity: 0;
     animation-name: cardpagesloader;
     animation-duration: 800ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 
-    &>p {
+    & >p {
         padding-top: 40px;
         padding-bottom: 12px;
     }
 
-    &>p::after {
+    & >p::after {
         display: block;
         content: "";
         height: 3px;
         width: 40px;
-        background: var(--TertiaryColor-Secondary);
+        background: var(--TertiaryColor-Main);
         transition: 0.3s ease-in-out;
     }
 
@@ -167,8 +136,7 @@ p {
 
     position: relative;
     border-radius: 15px;
-    transition: transform 0.3s ease-in-out;
-    background-color: 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
     &::after {
         position: absolute;
@@ -186,7 +154,7 @@ p {
         background-color: rgba(0, 0, 0, 0.05);
     }
 
-    &::after {
+    &:hover::after {
         opacity: 1;
     }
 
@@ -225,7 +193,7 @@ p {
                 width: calc(100% - 80px);
                 transition: width 0.4s cubic-bezier(0.2, 0.5, 0.3, 1.5);
             }
-        }
+        } 
 
         & .price {
             display: flex;
@@ -248,16 +216,16 @@ p {
             color: #fff;
             transform: translateX(100px);
             transition: 0.3s cubic-bezier(0.2, 0.5, 0.3, 1.5);
-        }
+        
 
-        & svg {
-            position: absolute;
-            left: 35px;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 25px;
-            transition: transform 1s;
+            & svg {
+                position: absolute;
+                left: 35px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 25px;
+                transition: transform 1s;
+            }
         }
     }
-
 }

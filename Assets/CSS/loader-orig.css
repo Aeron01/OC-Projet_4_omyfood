@@ -1,5 +1,6 @@
 :root {
-    --looder-animation-length : 2s;
+    --loader-animation-length : 2s;
+    --loader-animation-loop-length : 1.5s;
 }
 
 .loader {
@@ -15,7 +16,7 @@
     align-items: center;
     background-color: rgba(255, 255, 255, 0.90);
     opacity: 1;
-    animation:  3s loader forwards;
+    animation:  var(--loader-animation-length) loader forwards;
 }
 
 @keyframes loader {
@@ -79,11 +80,11 @@
 }
 
 .left .top:before {
-    animation: rotate2 1s linear infinite;
+    animation: rotate2 var(--loader-animation-loop-length) linear infinite;
 }
 
 .right .top:before {
-    animation: rotate1 1s linear infinite;
+    animation: rotate1 var(--loader-animation-loop-length) linear infinite;
 }
 
 .top:after {
@@ -100,12 +101,12 @@
 .left {
     display: inline-block;
     margin-right: 10px;
-    animation: rotate1 1s cubic-bezier(.39, 1.52, .46, .92) infinite;
+    animation: rotate1 var(--loader-animation-loop-length) cubic-bezier(.39, 1.52, .46, .92) infinite;
 }
 
 .right {
     display: inline-block;
-    animation: rotate2 1s cubic-bezier(.39, 1.52, .46, .92) infinite;
+    animation: rotate2 var(--loader-animation-loop-length) cubic-bezier(.39, 1.52, .46, .92) infinite;
 }
 
 @keyframes rotate1 {
@@ -136,7 +137,7 @@ ul {
     height: 25px;
     position: relative;
     opacity: 0;
-    animation: 1s fadeInUp ;
+    animation: var(--loader-animation-loop-length) fadeInUp ;
 }
 
 li {

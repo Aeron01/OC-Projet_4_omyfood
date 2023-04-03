@@ -82,8 +82,7 @@ a {
     cursor: pointer;
 }
 
-
-
+/*--- loader ---*/
 
 /*--- Logo ---*/
 header {
@@ -376,13 +375,11 @@ header {
 }
 
 
-
 .LikeIcon {
     font-size: 32px;
     width: auto;
     position: relative;
 }
-
 
 .LikeIcon .heart {
     position: absolute;
@@ -404,27 +401,6 @@ header {
     opacity: 1;
     cursor: pointer;
 }
-
-/*label i {
-    position: absolute;
-    right: 0;
-}
-
-input[type="checkbox"].LikeCheckbox {
-    color: #000000;
-    display: none;
-    
-}
-
-input[type="checkbox"].LikeCheckbox + label::before {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    color: var(--PrimaryColor);
-}
-
-input[type="checkbox"].LikeCheckbox:checked + label::before {
-    opacity: 1;
-}*/
 
 /*--- Partie Footer ---*/
 footer {
@@ -463,8 +439,6 @@ footer, footer h2, footer a,
 
 
 .fa-handshake-angle, .fa-utensils {
-    /*height: 13px;
-    width: 11.92px;*/
     padding-right: 11px;
 }
 

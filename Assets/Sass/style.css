@@ -27,8 +27,6 @@
 .button {
   display: flex;
   justify-content: center;
-  padding-top: 27px;
-  padding-bottom: 57px;
 }
 .button .GradientBtn {
   width: 218px;
@@ -101,6 +99,12 @@
   overflow: hidden;
   position: relative;
   transition: 0.25s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+}
+@media screen and (min-width: 768px) {
+  .cards .card {
+    max-width: 335px;
+    max-height: 251px;
+  }
 }
 .cards .card:hover {
   transform: scale(1.05);
@@ -195,10 +199,25 @@ footer {
   height: 173px;
   padding: 22px 25px;
 }
+@media screen and (min-width: 768px) {
+  footer {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0;
+  }
+}
 
 footer h2 {
   font-family: var(--font_logo);
   padding-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  footer h2 {
+    font-size: 18px;
+    padding-right: 80px;
+    font-weight: 400;
+  }
 }
 
 footer a {
@@ -210,6 +229,13 @@ footer a {
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+@media screen and (min-width: 768px) {
+  .FooterMenu {
+    flex-direction: row;
+    gap: 40px;
+    padding: 71px;
+  }
 }
 
 .footer_a_FontWeigth_Secondary {
@@ -274,7 +300,6 @@ a {
 
 /*--- Localisation ---*/
 .container_search {
-  margin-bottom: 10px;
   background-color: #EAEAEA;
 }
 .container_search .search_form {
@@ -306,12 +331,24 @@ a {
   padding-right: 16px;
 }
 
-.container_description {
+.welcome_section {
+  height: 287px;
+  background: var(--BckgrndDefalutColorFunctioningBtn);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 27px;
+}
+@media screen and (min-width: 768px) {
+  .welcome_section {
+    height: 260px;
+  }
+}
+
+.container_description {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 15px;
   text-align: center;
 }
 .container_description .title {
@@ -328,7 +365,16 @@ a {
 
 /*--- Button "Fonctionnement" ---*/
 .container_functioning {
-  height: 440px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .container_functioning {
+    max-height: 262px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
 }
 .container_functioning .title {
   padding-left: 20px;
@@ -339,6 +385,11 @@ a {
   justify-content: center;
   align-items: center;
   gap: 25px;
+}
+@media screen and (min-width: 768px) {
+  .container_functioning .FunctioningBtns {
+    flex-direction: row;
+  }
 }
 .container_functioning .FunctioningBtn {
   display: flex;
@@ -352,6 +403,11 @@ a {
   background-color: var(--BckgrndDefalutColorFunctioningBtn);
   color: #000000;
   gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .container_functioning .FunctioningBtn {
+    max-width: 323px;
+  }
 }
 .container_functioning .FunctioningBtn .Btn-number {
   display: flex;
@@ -381,7 +437,7 @@ a {
 .Container_Restaurants {
   display: flex;
   padding: 25px;
-  background-color: var(--SearchAndRestauBckgrndColor);
+  background-color: var(--BckgrndDefalutColorFunctioningBtn);
 }
 .Container_Restaurants .Section_Restaurants {
   display: flex;

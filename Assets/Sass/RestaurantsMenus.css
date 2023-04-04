@@ -65,6 +65,13 @@ header .NavArrow {
   width: 100%;
   background-color: var(--BckgrndDefalutColorFunctioningBtn);
 }
+@media screen and (min-width: 768px) {
+  .container__RestauMenu {
+    max-width: 1055px;
+    margin-left: 193px;
+    margin-right: 192px;
+  }
+}
 
 .title-round {
   display: block;
@@ -78,10 +85,20 @@ header .NavArrow {
 .RestauMenu {
   width: calc(100% - 24px);
 }
+@media screen and (min-width: 768px) {
+  .RestauMenu {
+    width: calc(100% - 421px);
+  }
+}
 .RestauMenu .heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .RestauMenu .heading {
+    justify-content: space-evenly;
+  }
 }
 .RestauMenu .heading .title {
   font-family: var(--font_logo);
@@ -90,6 +107,10 @@ header .NavArrow {
 }
 .RestauMenu .heading .heart {
   right: 22px;
+}
+.RestauMenu .button {
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 
 .Mealsection {

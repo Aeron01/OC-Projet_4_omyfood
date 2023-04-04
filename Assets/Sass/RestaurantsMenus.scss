@@ -70,6 +70,11 @@ header .NavArrow {
     align-items: center;
     width: 100%;
     background-color: var(--BckgrndDefalutColorFunctioningBtn);
+    @media screen and (min-width:768px) {
+        max-width: 1055px;
+        margin-left: 193px;
+        margin-right: 192px;
+    }
 }
 
 
@@ -84,11 +89,16 @@ header .NavArrow {
 
 .RestauMenu {
     width: calc(100% - 24px);
-
+    @media screen and (min-width:768px) {
+        width: calc(100% - 421px);
+    }
     & .heading {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @media screen and (min-width:768px) {
+            justify-content: space-evenly;
+        }
 
         & .title {
             font-family: var(--font_logo);
@@ -99,6 +109,11 @@ header .NavArrow {
         & .heart {
             right: 22px;
         }
+    }
+
+    & .button {
+        padding-top: 27px;
+        padding-bottom: 27px;
     }
 }
 

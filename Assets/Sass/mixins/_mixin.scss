@@ -1,0 +1,26 @@
+@mixin titled-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+}
+
+@mixin flex-col($align: center, $justify: center) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-row($align: center, $justify: center) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin centered ($width: 100%) {
+    max-width: $width;
+    margin: 0 auto;
+}

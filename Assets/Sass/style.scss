@@ -1,5 +1,6 @@
 // Import variables
 @import "./variables/variable";
+@import "./mixins/mixin";
 
 // Import components
 @import "./components/button";
@@ -61,10 +62,8 @@ a {
 
     & .search_form {
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        @include flex-row;
+        
         width: auto;
         height: 50px;   
 
@@ -93,10 +92,9 @@ a {
 .welcome_section {
     height: 287px;
     background: var(--BckgrndDefalutColorFunctioningBtn);
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+    @include flex-col(unset);
+
     gap: 27px;
 
     @media screen and (min-width:768px) {
@@ -105,55 +103,59 @@ a {
 }
 
 .container_description {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    @include flex-col;
 
     & .title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-row;
         height: 68px;
         width: 60%;
     }
 
     & .content {
+        padding: 0 10px;
         height: 46px;
         font-size: 18px;
     }
 }
 
 /*--- Button "Fonctionnement" ---*/
-.container_functioning {   
+.container_functioning {
+    @include titled-section;
+    @include centered(1000px);
+
     padding-top: 40px;
     padding-bottom: 40px;
     background: #ffffff;
+
     @media screen and (min-width: 768px) {
         max-height: 262px;
         padding-top: 50px;
         padding-bottom: 80px;
     }
+    
     & .title {
-        padding-left: 20px;
+        @media screen and (max-width: 1040px) {
+            padding-left: 20px;
+        }
     }
+    
 
     & .FunctioningBtns {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex-col;
+
         gap: 25px;
+        width: 100%;
+
         @media screen and (min-width: 768px) {
             flex-direction: row;
+            width: calc(100% - 40px);
+            margin: 0 auto;
         }
     }
 
     & .FunctioningBtn {
-        display: flex;
-        align-items: center;
-        justify-content: start;
+        @include flex-row (center, start);
+
         height: 73px;
         width: calc(100% - 40px);
         border-radius: 20px;
@@ -162,19 +164,19 @@ a {
         background-color: var(--BckgrndDefalutColorFunctioningBtn);
         color: #000000;
         gap: 20px;
+
         @media screen and (min-width: 768px) {
             max-width: 323px;
         }
     
 
         & .Btn-number {
-            display: flex;
+            @include flex-row;
+
             height: 24px;
             width: 24px;
             background-color: var(--PrimaryColor);
             border-radius: 50%;
-            justify-content: center;
-            align-items: center;
             color: #ffffff;
             font-size: 14.18px;
             font-weight: 500;
@@ -182,7 +184,7 @@ a {
             transform: translateX(-12px);
         }
 
-        & :hover {
+        &:hover {
             background-color: #F5EDFF;
         
             & svg {
@@ -200,22 +202,42 @@ a {
 /*--- Restaurants ---*/
 .Container_Restaurants {
     display: flex;
-    padding: 25px;
     background-color: var(--BckgrndDefalutColorFunctioningBtn);
 
     & .Section_Restaurants {
-        display: flex;
+        @include titled-section;
+        @include centered(1000px);
+        
+        padding: 25px;
         width: 100%;
-        flex-direction: column;
-        gap: 10px;
         margin-bottom: 64px;
     
         &__Container_cards {
-            display: flex;
-            flex-direction: row;
+            @include flex-row (unset, unset);
+
             flex-wrap: wrap;
             gap: 20px;
             width: auto;
+
+            @media screen and (min-width:1000px) {
+                overflow-x: auto;
+                overflow-y: hidden;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                -webkit-overflow-style: none;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+
+                width: 100%;
+                flex-wrap: nowrap;
+                & .card {
+                    min-width: 340px;
+                    &:hover {
+                        transform: scale(1.0);
+                    }
+                }
+            }
         }
     }
 }

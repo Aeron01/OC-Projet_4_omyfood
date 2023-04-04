@@ -1,2 +1,3 @@
 Améliorez l'interface d'un site mobile avec des animations CSS
-sass --watch ./Sass/style.scss ./CSS/style.css && sass --watch ./Sass/loader.scss ./CSS/loader.css && sass --watch ./Sass/RestaurantsMenus.scss ./CSS/RestaurantsMenus.css
+
+sass --watch ./Assets/Sass/style.scss:./Assets/CSS/style.css ./Assets/Sass/loader.scss:./Assets/CSS/loader.css ./Assets/Sass/RestaurantsMenus.scss:./Assets/CSS/RestaurantsMenus.css

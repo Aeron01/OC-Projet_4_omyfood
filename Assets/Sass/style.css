@@ -164,6 +164,7 @@ header {
 }
 header .NavArrow {
   position: absolute;
+  top: 12px;
   left: 12px;
   display: none;
   justify-content: center;

@@ -1,265 +1,226 @@
-/*--- Color Variables and font style ---*/
-
-:root {
-    /*--- Couleur pour l'intérieur des flèches, le text du bouton "Explorez les menus", les cercles des numéros 1,2 et 3 et les iconnes quand on séléctionne dans la partie "Fonctionnement", et le dégrader ---*/
-    --PrimaryColor: #9356DC;
-
-    /*-- 2ème couleur pour le dégrader ---*/
-    --SecondaryColor: #FF79DA;
-
-    /*--- Couleur pour le fond de "Nouveau', le fond du cercle du "+", le fond de la sélection du plat et la couleur du "coché", et la ligne sous les éléments du menu---*/
-    --TertiaryColor-Main: #99E2D0;
-
-    /*--- Couleur pour le "+" et le mot "Nouveau" ---*/
-    --TertiaryColor-Secondary: #008766;
-
-    --jesaitpas1: #89C8FA;
-    --jesaitpas2: #003A68;
-
-    /*--- pour le logo en text ---*/
-    --font_text: 'Roboto', sans-serif;
-
-    /*--- pour le text en générale ---*/
-    --font_logo: 'Shrikhand', cursive;
-
-    /*--- Couleur de fond du footer ---*/
-    --BckgrndColorFooter: #353535;
-
-    /*--- Couleur de fond de la recherche et de la partie restaurants ---*/
-    --SearchAndRestauBckgrndColor: #D2D2D2;
-}
-
-/*--- Reset internet Browser ---*/
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
+/*--- Restaurants page unique style ---*/
 h3 {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 p {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 h3,
 p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 
 /*--- Navigation ---*/
 header .NavArrow {
-    display: flex;    
+  display: flex;
 }
-
 
 /*--- Restaurant Title Photo ---*/
 .RestauTablePhoto {
-    margin: 0;
-    padding: 0;
-    height: 275px;
+  margin: 0;
+  padding: 0;
+  height: 275px;
 }
 
 .RestauTablePhoto img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 /*--- Card Loader ---*/
 @keyframes cardpagesloader {
-    0% {
-        transform: translateY(10vh);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(10vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
-
 #cardloader-1 {
-    animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 
 #cardloader-2 {
-    animation-delay: 0.45s;
+  animation-delay: 0.45s;
 }
 
 #cardloader-3 {
-    animation-delay: 0.65s;
-}
-
-.Mealsection {
-    opacity: 0;
-    animation-name: cardpagesloader;
-    animation-duration: 800ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-
-.Mealsection>p {
-    padding-top: 40px;
-    padding-bottom: 12px;
-}
-
-.Mealsection>p:after {
-    display: block;
-    content: "";
-    height: 3px;
-    width: 40px;
-    background: var(--TertiaryColor-Main);
-    transition: 0.3s ease-in-out;
-}
-
-.Mealsection:hover>p:after {
-    width: 100%;
-}
-
-.Mealsection .Meal:hover {
-    transform: scale(102%);
-    transition: 0.3s ease-in-out;
-    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.05);
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.05);
+  animation-delay: 0.65s;
 }
 
 /*--- Restaurant Menu Card ---*/
 .container__RestauMenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: var(--BckgrndDefalutColorFunctioningBtn);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--BckgrndDefalutColorFunctioningBtn);
 }
-
-.title h3, .title p{
-    font-family: var(--font_text);
-}
-
-.container__RestauMenu .title {
-    font-family: var(--font_logo);
-    font-weight: 400;
-    font-size: 28px;
+@media screen and (min-width: 768px) {
+  .container__RestauMenu {
+    max-width: 1055px;
+    margin-left: 193px;
+    margin-right: 192px;
+  }
 }
 
 .title-round {
-    display: block;
-    width: 100%;
-    height: 32px;
-    border-radius: 32px 32px 0 0;
-    background-color: var(--BckgrndDefalutColorFunctioningBtn);
-    margin-top: -31px;
+  display: block;
+  width: 100%;
+  height: 32px;
+  border-radius: 32px 32px 0 0;
+  background-color: var(--BckgrndDefalutColorFunctioningBtn);
+  margin-top: -31px;
 }
 
 .RestauMenu {
-    width: calc(100% - 24px);
-    
+  width: calc(100% - 24px);
+}
+@media screen and (min-width: 768px) {
+  .RestauMenu {
+    width: calc(100% - 421px);
+  }
+}
+.RestauMenu .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .RestauMenu .heading {
+    justify-content: space-evenly;
+  }
+}
+.RestauMenu .heading .title {
+  font-family: var(--font_logo);
+  font-weight: 400;
+  font-size: 28px;
+}
+.RestauMenu .heading .heart {
+  right: 22px;
+}
+.RestauMenu .button {
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 
-.heading {
-    display: flex;
-    flex-direction: row;
-    
-    justify-content: space-between;
+.Mealsection {
+  opacity: 0;
+  animation-name: cardpagesloader;
+  animation-duration: 800ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
-
-.LikeIcon {
-    height: 21px;
+.Mealsection > p {
+  padding-top: 40px;
+  padding-bottom: 12px;
+}
+.Mealsection > p::after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 40px;
+  background: var(--TertiaryColor-Main);
+  transition: 0.3s ease-in-out;
+}
+.Mealsection:hover > p:after {
+  width: 100%;
 }
 
 .Meal {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.Meal::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+.Meal:hover {
+  transform: scale(102%);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.Meal:hover::after {
+  opacity: 1;
+}
+.Meal .label {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: 0.53s;
+  background-color: #fff;
+  height: 69px;
+  cursor: pointer;
+  overflow: hidden;
+  /*--- Add in cart ---*/
+}
+.Meal .label:hover .title {
+  width: calc(100% - 150px);
+}
+.Meal .label:hover .checkbox {
+  transform: translateX(30px);
+}
+.Meal .label:hover .checkbox svg {
+  transform: translate(-50%, -50%) rotateZ(360deg);
+}
+.Meal .label .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.Meal .label .content .title {
+  padding-left: 20px;
+  width: calc(100% - 80px);
+  transition: width 0.4s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+}
+.Meal .label .price {
+  display: flex;
+  height: 35px;
+  width: auto;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-left: 10px;
+}
+.Meal .label .checkbox {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  background-color: var(--TertiaryColor-Main);
+  color: #fff;
+  transform: translateX(100px);
+  transition: 0.3s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+}
+.Meal .label .checkbox svg {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  transition: transform 1s;
 }
 
-.label {
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    transition: 0.53s;
-    background-color: #fff;
-    height: 69px;
-    
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.label .content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    
-}
-
-.label .title {
-    padding-left: 20px;
-    width: calc(100% - 80px);
-    transition: width 0.4s cubic-bezier(0.2, 0.5, 0.3, 1.5);
-}
-
-.price {
-    display: flex;
-    height: 35px;
-    width: auto;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-left: 10px;
-    /*text-align: center;*/
-    /*background-color: skyblue;*/
-}
-
-.content .checkbox {
-    position: absolute;
-    right: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100px;
-    height: 100%;
-    background-color: var(--TertiaryColor-Main);
-    color: #fff;
-    transform: translateX(100px);
-    transition: 0.3s cubic-bezier(0.2, 0.5, 0.3, 1.5);
-}
-
-.content .checkbox svg {
-    position: absolute;
-    left: 35px;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
-    transition: transform 1s;
-}
-
-.label:hover>.title {
-    width: calc(100% - 150px);
-}
-
-/*-- Add in cart --*/
-.label:hover>.checkbox {
-    transform: translateX(30px);
-}
-
-.label:hover>.checkbox svg {
-    transform: translate(-50%, -50%) rotateZ(360deg);
-}
-
-
-/*@media screen and (min-width:992px) {
-    body {
-        margin: 75px;
-    }
-}*/
+/*# sourceMappingURL=RestaurantsMenus.css.map */

@@ -258,13 +258,11 @@ footer .fa-utensils {
   padding-right: 11px;
 }
 
-/*--- Reset internet Browser ---*/
 * {
   margin: 0;
   padding: 0;
 }
 
-/*--- Site margin default ---*/
 body {
   color: #000000;
   font-family: var(--font_text);
@@ -274,7 +272,6 @@ main {
   margin-top: 63px;
 }
 
-/*--- Site font weight ---*/
 h1 {
   font-size: 30px;
   font-weight: 400;
@@ -302,7 +299,6 @@ a {
   text-decoration: none;
 }
 
-/*--- Localisation ---*/
 .container_search {
   background-color: #EAEAEA;
 }
@@ -362,12 +358,11 @@ a {
   width: 60%;
 }
 .container_description .content {
-  padding: 0 10px;
+  text-align: center;
   height: 46px;
   font-size: 18px;
 }
 
-/*--- Button "Fonctionnement" ---*/
 .container_functioning {
   display: flex;
   flex-direction: column;
@@ -403,7 +398,7 @@ a {
 @media screen and (min-width: 768px) {
   .container_functioning .FunctioningBtns {
     flex-direction: row;
-    width: calc(100% - 40px);
+    max-width: calc(100% - 40px);
     margin: 0 auto;
   }
 }
@@ -451,7 +446,6 @@ a {
   color: #7E7E7E;
 }
 
-/*--- Restaurants ---*/
 .Container_Restaurants {
   display: flex;
   background-color: var(--BckgrndDefalutColorFunctioningBtn);
@@ -494,7 +488,7 @@ a {
     min-width: 340px;
   }
   .Container_Restaurants .Section_Restaurants__Container_cards .card:hover {
-    transform: scale(1);
+    transform: scale(1.01);
   }
 }
 

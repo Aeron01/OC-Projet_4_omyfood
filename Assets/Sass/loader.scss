@@ -1,4 +1,7 @@
-/*--- Loader ---*/
+// import variables
+@import "./mixins/mixin";
+
+// Loader
 .loader {
 
     $loader-animation-length: 2s;
@@ -66,16 +69,14 @@
         }
     }
     
+    @include flex-col;
+
     position: fixed;
-    flex-direction: column;
     z-index: 10000;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgba(255, 255, 255, 0.90);
     opacity: 1;
     animation: $loader-animation-length loader forwards;

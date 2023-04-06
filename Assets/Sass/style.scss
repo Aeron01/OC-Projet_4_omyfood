@@ -11,13 +11,13 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 
-/*--- Reset internet Browser ---*/
+// Reset internet Browser
 * {
     margin: 0;
     padding: 0;
 }
 
-/*--- Site margin default ---*/
+// Site margin default
 body {
     color: #000000;
     font-family: var(--font_text);
@@ -27,7 +27,7 @@ main {
     margin-top: 63px;
 }
 
-/*--- Site font weight ---*/
+// Site font weight
 
 h1 {
     font-size: 30px;
@@ -56,7 +56,7 @@ a {
     text-decoration: none;
 }
 
-/*--- Localisation ---*/
+// Localisation
 .container_search {
     background-color: #EAEAEA;
 
@@ -112,13 +112,13 @@ a {
     }
 
     & .content {
-        padding: 0 10px;
+        text-align: center;
         height: 46px;
         font-size: 18px;
     }
 }
 
-/*--- Button "Fonctionnement" ---*/
+// Button "Fonctionnement"
 .container_functioning {
     @include titled-section;
     @include centered(1000px);
@@ -148,8 +148,7 @@ a {
 
         @media screen and (min-width: 768px) {
             flex-direction: row;
-            width: calc(100% - 40px);
-            margin: 0 auto;
+            @include centered(calc(100% - 40px));
         }
     }
 
@@ -199,7 +198,7 @@ a {
 }
 
 
-/*--- Restaurants ---*/
+// Restaurants
 .Container_Restaurants {
     display: flex;
     background-color: var(--BckgrndDefalutColorFunctioningBtn);
@@ -234,7 +233,7 @@ a {
                 & .card {
                     min-width: 340px;
                     &:hover {
-                        transform: scale(1.0);
+                        transform: scale(1.01);
                     }
                 }
             }

@@ -356,6 +356,7 @@ a {
   align-items: center;
   height: 68px;
   width: 60%;
+  text-align: center;
 }
 .container_description .content {
   text-align: center;

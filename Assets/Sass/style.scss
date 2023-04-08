@@ -109,6 +109,7 @@ a {
         @include flex-row;
         height: 68px;
         width: 60%;
+        text-align: center;
     }
 
     & .content {

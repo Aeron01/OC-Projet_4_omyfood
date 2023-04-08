@@ -4,7 +4,7 @@ Quatrième projet du parcours "Intérgrateur web" chez OpenClassroom. L'objectif
 
 Vous pouvez retrouver le [brief complet ici](./doc/Brief+créatif+site+Ohmyfood.pdf)
 
-![screenshot du site](./src/screenshot.png)
+![screenshot du site](./src/screenshot.jpg)
 
 ## Objectifs
 
@@ -73,5 +73,3 @@ Sinon, clonez le projet
 ```terminal
 git clone https://github.com/Aeron01/OC-Projet_4_omyfood.git
 ```
-
-(sass --watch ./Assets/Sass/style.scss:./Assets/CSS/style.css ./Assets/Sass/loader.scss:./Assets/CSS/loader.css ./Assets/Sass/RestaurantsMenus.scss:./Assets/CSS/RestaurantsMenus.css)

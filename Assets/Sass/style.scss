@@ -1,0 +1,244 @@
+// Import variables
+@import "./variables/variable";
+@import "./mixins/mixin";
+
+// Import components
+@import "./components/button";
+@import "./components/heart";
+@import "./components/card";
+
+// Import layouts
+@import "./layouts/header";
+@import "./layouts/footer";
+
+// Reset internet Browser
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Site margin default
+body {
+    color: #000000;
+    font-family: var(--font_text);
+}
+
+main {
+    margin-top: 63px;
+}
+
+// Site font weight
+
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: var(--font_logo);
+}
+
+h2, h3 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+// Localisation
+.container_search {
+    background-color: #EAEAEA;
+
+    & .search_form {
+
+        @include flex-row;
+        
+        width: auto;
+        height: 50px;   
+
+        &_txt {
+            display: flex;
+            width: auto;
+            height: 100%;
+            font-size: 16px;
+            font-family: var(--font_text);
+            font-weight: 500;
+            padding-left: 9.25px;
+            border: none;
+            background-color: transparent;
+
+            &::placeholder {
+                color: #000000;
+            }
+        }
+
+        &_loc .fa-location-dot {
+            padding-right: 16px;
+        }
+    }
+}
+
+.welcome_section {
+    height: 287px;
+    background: var(--BckgrndDefalutColorFunctioningBtn);
+
+    @include flex-col(unset);
+
+    gap: 27px;
+
+    @media screen and (min-width:768px) {
+        height: 260px;
+    }
+}
+
+.container_description {
+    @include flex-col;
+
+    & .title {
+        @include flex-row;
+        height: 68px;
+        width: 60%;
+        text-align: center;
+    }
+
+    & .content {
+        text-align: center;
+        height: 46px;
+        font-size: 18px;
+    }
+}
+
+// Button "Fonctionnement"
+.container_functioning {
+    @include titled-section;
+    @include centered(1000px);
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #ffffff;
+
+    @media screen and (min-width: 768px) {
+        max-height: 262px;
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+    
+    & .title {
+        @media screen and (max-width: 1040px) {
+            padding-left: 20px;
+        }
+    }
+    
+
+    & .FunctioningBtns {
+        @include flex-col;
+
+        gap: 25px;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            @include centered(calc(100% - 40px));
+        }
+    }
+
+    & .FunctioningBtn {
+        @include flex-row (center, start);
+
+        height: 73px;
+        width: calc(100% - 40px);
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        background-color: var(--BckgrndDefalutColorFunctioningBtn);
+        color: #000000;
+        gap: 20px;
+
+        @media screen and (min-width: 768px) {
+            max-width: 323px;
+        }
+    
+
+        & .Btn-number {
+            @include flex-row;
+
+            height: 24px;
+            width: 24px;
+            background-color: var(--PrimaryColor);
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 14.18px;
+            font-weight: 500;
+            font-family: var(--font_text);
+            transform: translateX(-12px);
+        }
+
+        &:hover {
+            background-color: #F5EDFF;
+        
+            & svg {
+                color: var(--PrimaryColor);
+            }
+        }
+
+        & svg {
+            color: #7E7E7E;
+        }
+    }   
+}
+
+
+// Restaurants
+.Container_Restaurants {
+    display: flex;
+    background-color: var(--BckgrndDefalutColorFunctioningBtn);
+
+    & .Section_Restaurants {
+        @include titled-section;
+        @include centered(1000px);
+        
+        padding: 25px;
+        width: 100%;
+        margin-bottom: 64px;
+    
+        &__Container_cards {
+            @include flex-row (unset, unset);
+
+            flex-wrap: wrap;
+            gap: 20px;
+            width: auto;
+
+            @media screen and (min-width:1000px) {
+                overflow-x: auto;
+                overflow-y: hidden;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                -webkit-overflow-style: none;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+
+                width: 100%;
+                flex-wrap: nowrap;
+                & .card {
+                    min-width: 340px;
+                    &:hover {
+                        transform: scale(1.01);
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,22 @@
+{
+  "name": "omyfood-sass",
+  "version": "1.0.0",
+  "description": "\"Quatrième projet du parcours \\\"Intégrateur web\\\" chez OpenClassroom. L'objectif est d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass\"",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "sass": "sass --watch ./Assets/Sass/style.scss:./Assets/CSS/style.css ./Assets/Sass/loader.scss:./Assets/CSS/loader.css ./Assets/Sass/RestaurantsMenus.scss:./Assets/CSS/RestaurantsMenus.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aeron01/OC-Projet_4_omyfood.git"
+  },
+  "author": "Aeron01 alias Christian SON",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aeron01/OC-Projet_4_omyfood/issues"
+  },
+  "homepage": "https://github.com/Aeron01/OC-Projet_4_omyfood#readme"
+}

@@ -1,0 +1,27 @@
+.LikeIcon {
+    font-size: 32px;
+    width: auto;
+    position: relative;
+
+    & .heart {
+        position: absolute;
+        right: 0;
+    
+
+        &.back {
+            color: black;
+        }
+
+        &.front {
+            color: var(--SecondaryColor);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--PrimaryColor);
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+    }
+}

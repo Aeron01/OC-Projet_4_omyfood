@@ -1,0 +1,33 @@
+/*--- Color Variables and font style ---*/
+
+:root {
+    /*--- Couleur pour l'intérieur des flèches, le text du bouton "Explorez les menus", les cercles des numéros 1,2 et 3 et les iconnes quand on séléctionne dans la partie "Fonctionnement", et le dégrader ---*/
+    --PrimaryColor: #9356DC;
+
+    /*-- 2ème couleur pour le dégrader ---*/
+    --SecondaryColor: #FF79DA;
+
+    /*--- Couleur pour le fond de "Nouveau', le fond du cercle du "+", le fond de la sélection du plat et la couleur du "coché", et la ligne sous les éléments du menu---*/
+    --TertiaryColor-Main: #99E2D0;
+
+    /*--- Couleur pour le "+" et le mot "Nouveau" ---*/
+    --TertiaryColor-Secondary: #008766;
+
+    --jesaitpas1: #89C8FA;
+    --jesaitpas2: #003A68;
+
+    /*--- pour le logo en text ---*/
+    --font_text: 'Roboto', sans-serif;
+
+    /*--- pour le text en générale ---*/
+    --font_logo: 'Shrikhand', cursive;
+
+    /*--- Couleur de fond du footer ---*/
+    --BckgrndColorFooter: #353535;
+
+    /*--- Couleur de fond de la recherche et de la partie restaurants ---*/
+    --SearchAndRestauBckgrndColor: #D2D2D2;
+
+    /*--- ---*/
+    --BckgrndDefalutColorFunctioningBtn: #F7F7F7;
+}

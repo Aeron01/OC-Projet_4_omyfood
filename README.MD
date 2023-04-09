@@ -66,9 +66,9 @@ Vous pouvez retrouver le [brief complet ici](./doc/Brief+créatif+site+Ohmyfood.
 
 ## Tester le projet
 
-Pour tester simplement & rapidement, veuillez préférer visiter la démo en ligne : [aeron01.github.io/OC-Projet_4_omyfood](https://aeron01.github.io/OC-Projet_4_omyfood/index.html)
+Pour tester simplement & rapidement, veuillez visiter la démo en ligne : [aeron01.github.io/OC-Projet_4_omyfood](https://aeron01.github.io/OC-Projet_4_omyfood/index.html)
 
-Sinon, clonez le projet
+Sinon, vous pouvez cloner le projet
 
 ```terminal
 git clone https://github.com/Aeron01/OC-Projet_4_omyfood.git

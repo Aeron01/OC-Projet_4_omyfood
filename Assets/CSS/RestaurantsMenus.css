@@ -169,9 +169,6 @@ header .NavArrow {
   cursor: pointer;
   overflow: hidden;
 }
-.Meal .label:hover .title {
-  width: calc(100% - 150px);
-}
 .Meal .label:hover .checkbox {
   transform: translateX(30px);
 }
@@ -191,6 +188,9 @@ header .NavArrow {
   padding-left: 20px;
   width: calc(100% - 80px);
   transition: width 0.4s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+}
+.Meal .label .content:hover .title {
+  width: calc(100% - 150px);
 }
 .Meal .label .price {
   display: flex;

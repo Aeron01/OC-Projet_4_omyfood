@@ -180,10 +180,6 @@ header .NavArrow {
         cursor: pointer;
         overflow: hidden;
 
-        &:hover .title {
-            width: calc(100% - 150px);
-        }
-
         // Add in cart
         &:hover .checkbox {
             transform: translateX(30px);
@@ -204,6 +200,10 @@ header .NavArrow {
                 padding-left: 20px;
                 width: calc(100% - 80px);
                 transition: width 0.4s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+            }
+
+            &:hover .title {
+                width: calc(100% - 150px);
             }
         } 
 
@@ -229,7 +229,6 @@ header .NavArrow {
             transform: translateX(100px);
             transition: 0.3s cubic-bezier(0.2, 0.5, 0.3, 1.5);
         
-
             & svg {
                 position: absolute;
                 left: 35px;

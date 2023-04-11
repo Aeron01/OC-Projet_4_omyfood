@@ -22,7 +22,11 @@
         background: linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
         position: relative;
         cursor: pointer;
-    
+        
+        & a {
+          color: #fff;  
+        }
+
         & :before {
             position: absolute;
             content: '';

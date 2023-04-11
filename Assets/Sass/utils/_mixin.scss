@@ -3,7 +3,12 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 1rem;
+    gap: 1.8rem;
+    padding: 50px 25px 70px 25px;
+
+    @media screen and (min-width:$breakpoint-desktop) {
+        padding: 50px 25px 80px 25px;
+    }
 }
 
 @mixin flex-col($align: center, $justify: center) {

@@ -13,6 +13,7 @@
     /*--- Couleur pour le "+" et le mot "Nouveau" ---*/
     --TertiaryColor-Secondary: #008766;
 
+    /*--- Couleur sur la maquette mais sans definition de son utilisation ---*/
     --jesaitpas1: #89C8FA;
     --jesaitpas2: #003A68;
 
@@ -31,3 +32,6 @@
     /*--- ---*/
     --BckgrndDefalutColorFunctioningBtn: #F7F7F7;
 }
+
+$breakpoint-desktop : 1050px;
+$breakpoint-tablette : 768px;

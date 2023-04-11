@@ -1,5 +1,6 @@
 // import variables
 @import "./utils/mixin";
+@import "./utils/variable";
 
 // Restaurants page unique style 
 
@@ -20,19 +21,19 @@ p {
 
 
 // Navigation
-header .NavArrow {
+header .nav_arrow {
     display: flex;
 }
 
 
 // Restaurant Title Photo
-.RestauTablePhoto {
+.restau_table_photo {
     margin: 0;
     padding: 0;
     height: 275px;
 }
 
-.RestauTablePhoto img {
+.restau_table_photo img {
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -64,37 +65,37 @@ header .NavArrow {
 }
 
 // Restaurant Menu Card
-.container__RestauMenu {
+.container__restau_menu {
     
     @include flex-col;
 
     width: 100%;
     background-color: var(--BckgrndDefalutColorFunctioningBtn);
-    @media screen and (min-width:768px) {
-        @include centered(1055px);
+    @media screen and (min-width: $breakpoint-tablette) {
+        @include centered(calc($breakpoint-desktop + 5px));
     }
 }
 
-.title-round {
+.title_round {
     display: block;
     width: 100%;
-    height: 32px;
+    height: 50px;
     border-radius: 32px 32px 0 0;
     background-color: var(--BckgrndDefalutColorFunctioningBtn);
     margin-top: -31px;
 }
 
-.RestauMenu {
+.restau_menu {
     width: calc(100% - 24px);
-    @media screen and (min-width:768px) {
+    @media screen and (min-width: $breakpoint-tablette) {
         width: calc(100% - 421px);
         min-width: 600px;
     }
     & .heading {
         @include flex-row(unset,space-between);
         
-        @media screen and (min-width:768px) {
-            justify-content: space-evenly;
+        @media screen and (min-width: $breakpoint-tablette) {
+            justify-content: center;
         }
 
         & .title {
@@ -105,16 +106,19 @@ header .NavArrow {
 
         & .heart {
             right: 22px;
+            @media screen and (min-width: $breakpoint-tablette) {
+                right: -60px;
+            }
         }
     }
 
     & .button {
-        padding-top: 27px;
-        padding-bottom: 27px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 
-.Mealsection {
+.meal_section {
     opacity: 0;
     animation-name: cardpagesloader;
     animation-duration: 800ms;
@@ -140,7 +144,7 @@ header .NavArrow {
     }
 }
 
-.Meal {
+.meal {
     @include flex-col(unset,unset);
 
     gap: 20px;

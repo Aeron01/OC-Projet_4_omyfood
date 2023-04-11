@@ -97,7 +97,7 @@ a {
 
     gap: 27px;
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width:$breakpoint-tablette) {
         height: 260px;
     }
 }
@@ -122,38 +122,29 @@ a {
 // Button "Fonctionnement"
 .container_functioning {
     @include titled-section;
-    @include centered(1000px);
+    @include centered($breakpoint-desktop);
 
     padding-top: 40px;
     padding-bottom: 40px;
     background: #ffffff;
 
-    @media screen and (min-width: 768px) {
-        max-height: 262px;
-        padding-top: 50px;
-        padding-bottom: 80px;
+    @media screen and (min-width: $breakpoint-desktop) {
+        @include centered($breakpoint-desktop);
     }
-    
-    & .title {
-        @media screen and (max-width: 1040px) {
-            padding-left: 20px;
-        }
-    }
-    
 
-    & .FunctioningBtns {
+    & .functioning_btns {
         @include flex-col;
 
         gap: 25px;
         width: 100%;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $breakpoint-desktop) {
             flex-direction: row;
             @include centered(calc(100% - 40px));
         }
     }
 
-    & .FunctioningBtn {
+    & .functioning_btn {
         @include flex-row (center, start);
 
         height: 73px;
@@ -165,12 +156,12 @@ a {
         color: #000000;
         gap: 20px;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $breakpoint-desktop) {
             max-width: 323px;
         }
     
 
-        & .Btn-number {
+        & .btn_number {
             @include flex-row;
 
             height: 24px;
@@ -200,26 +191,35 @@ a {
 
 
 // Restaurants
-.Container_Restaurants {
+.container_restaurants {
     display: flex;
     background-color: var(--BckgrndDefalutColorFunctioningBtn);
 
-    & .Section_Restaurants {
+    & .section_restaurants {
         @include titled-section;
-        @include centered(1000px);
-        
-        padding: 25px;
+
         width: 100%;
         margin-bottom: 64px;
+
+        @include centered($breakpoint-tablette);
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            @include centered($breakpoint-desktop);
+            width: calc(100% - 50px);
+        }
     
-        &__Container_cards {
+        &__container_cards {
             @include flex-row (unset, unset);
 
             flex-wrap: wrap;
             gap: 20px;
             width: auto;
 
-            @media screen and (min-width:1000px) {
+            @media screen and (max-width: calc($breakpoint-desktop - 1px)) {
+                justify-content: center;
+            }
+
+            @media screen and (min-width: $breakpoint-desktop) {
                 overflow-x: auto;
                 overflow-y: hidden;
                 &::-webkit-scrollbar {

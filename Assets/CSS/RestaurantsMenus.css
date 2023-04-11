@@ -1,3 +1,29 @@
+@charset "UTF-8";
+/*--- Color Variables and font style ---*/
+:root {
+  /*--- Couleur pour l'intérieur des flèches, le text du bouton "Explorez les menus", les cercles des numéros 1,2 et 3 et les iconnes quand on séléctionne dans la partie "Fonctionnement", et le dégrader ---*/
+  --PrimaryColor: #9356DC;
+  /*-- 2ème couleur pour le dégrader ---*/
+  --SecondaryColor: #FF79DA;
+  /*--- Couleur pour le fond de "Nouveau', le fond du cercle du "+", le fond de la sélection du plat et la couleur du "coché", et la ligne sous les éléments du menu---*/
+  --TertiaryColor-Main: #99E2D0;
+  /*--- Couleur pour le "+" et le mot "Nouveau" ---*/
+  --TertiaryColor-Secondary: #008766;
+  /*--- Couleur sur la maquette mais sans definition de son utilisation ---*/
+  --jesaitpas1: #89C8FA;
+  --jesaitpas2: #003A68;
+  /*--- pour le logo en text ---*/
+  --font_text: "Roboto", sans-serif;
+  /*--- pour le text en générale ---*/
+  --font_logo: "Shrikhand", cursive;
+  /*--- Couleur de fond du footer ---*/
+  --BckgrndColorFooter: #353535;
+  /*--- Couleur de fond de la recherche et de la partie restaurants ---*/
+  --SearchAndRestauBckgrndColor: #D2D2D2;
+  /*--- ---*/
+  --BckgrndDefalutColorFunctioningBtn: #F7F7F7;
+}
+
 h3 {
   font-size: 17px;
 }
@@ -13,17 +39,17 @@ p {
   text-overflow: ellipsis;
 }
 
-header .NavArrow {
+header .nav_arrow {
   display: flex;
 }
 
-.RestauTablePhoto {
+.restau_table_photo {
   margin: 0;
   padding: 0;
   height: 275px;
 }
 
-.RestauTablePhoto img {
+.restau_table_photo img {
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -51,7 +77,7 @@ header .NavArrow {
   animation-delay: 0.65s;
 }
 
-.container__RestauMenu {
+.container__restau_menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,66 +86,71 @@ header .NavArrow {
   background-color: var(--BckgrndDefalutColorFunctioningBtn);
 }
 @media screen and (min-width: 768px) {
-  .container__RestauMenu {
+  .container__restau_menu {
     max-width: 1055px;
     margin: 0 auto;
   }
 }
 
-.title-round {
+.title_round {
   display: block;
   width: 100%;
-  height: 32px;
+  height: 50px;
   border-radius: 32px 32px 0 0;
   background-color: var(--BckgrndDefalutColorFunctioningBtn);
   margin-top: -31px;
 }
 
-.RestauMenu {
+.restau_menu {
   width: calc(100% - 24px);
 }
 @media screen and (min-width: 768px) {
-  .RestauMenu {
+  .restau_menu {
     width: calc(100% - 421px);
     min-width: 600px;
   }
 }
-.RestauMenu .heading {
+.restau_menu .heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: unset;
 }
 @media screen and (min-width: 768px) {
-  .RestauMenu .heading {
-    justify-content: space-evenly;
+  .restau_menu .heading {
+    justify-content: center;
   }
 }
-.RestauMenu .heading .title {
+.restau_menu .heading .title {
   font-family: var(--font_logo);
   font-weight: 400;
   font-size: 28px;
 }
-.RestauMenu .heading .heart {
+.restau_menu .heading .heart {
   right: 22px;
 }
-.RestauMenu .button {
-  padding-top: 27px;
-  padding-bottom: 27px;
+@media screen and (min-width: 768px) {
+  .restau_menu .heading .heart {
+    right: -60px;
+  }
+}
+.restau_menu .button {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-.Mealsection {
+.meal_section {
   opacity: 0;
   animation-name: cardpagesloader;
   animation-duration: 800ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-.Mealsection > p {
+.meal_section > p {
   padding-top: 40px;
   padding-bottom: 12px;
 }
-.Mealsection > p::after {
+.meal_section > p::after {
   display: block;
   content: "";
   height: 3px;
@@ -127,11 +158,11 @@ header .NavArrow {
   background: var(--TertiaryColor-Main);
   transition: 0.3s ease-in-out;
 }
-.Mealsection:hover > p:after {
+.meal_section:hover > p:after {
   width: 100%;
 }
 
-.Meal {
+.meal {
   display: flex;
   flex-direction: column;
   justify-content: unset;
@@ -142,7 +173,7 @@ header .NavArrow {
   border-radius: 15px;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-.Meal::after {
+.meal::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -153,14 +184,14 @@ header .NavArrow {
   transition: opacity 0.3s ease-in-out;
   z-index: -1;
 }
-.Meal:hover {
+.meal:hover {
   transform: scale(1.02);
   background-color: rgba(0, 0, 0, 0.05);
 }
-.Meal:hover::after {
+.meal:hover::after {
   opacity: 1;
 }
-.Meal .label {
+.meal .label {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   transition: 0.53s;
@@ -169,13 +200,13 @@ header .NavArrow {
   cursor: pointer;
   overflow: hidden;
 }
-.Meal .label:hover .checkbox {
+.meal .label:hover .checkbox {
   transform: translateX(30px);
 }
-.Meal .label:hover .checkbox svg {
+.meal .label:hover .checkbox svg {
   transform: translate(-50%, -50%) rotateZ(360deg);
 }
-.Meal .label .content {
+.meal .label .content {
   display: flex;
   flex-direction: row;
   justify-content: unset;
@@ -184,15 +215,15 @@ header .NavArrow {
   height: 100%;
   position: relative;
 }
-.Meal .label .content .title {
+.meal .label .content .title {
   padding-left: 20px;
   width: calc(100% - 80px);
   transition: width 0.4s cubic-bezier(0.2, 0.5, 0.3, 1.5);
 }
-.Meal .label .content:hover .title {
+.meal .label .content:hover .title {
   width: calc(100% - 150px);
 }
-.Meal .label .price {
+.meal .label .price {
   display: flex;
   height: 35px;
   width: auto;
@@ -200,7 +231,7 @@ header .NavArrow {
   align-items: flex-end;
   padding-left: 10px;
 }
-.Meal .label .checkbox {
+.meal .label .checkbox {
   position: absolute;
   right: 0;
   display: flex;
@@ -213,7 +244,7 @@ header .NavArrow {
   transform: translateX(100px);
   transition: 0.3s cubic-bezier(0.2, 0.5, 0.3, 1.5);
 }
-.Meal .label .checkbox svg {
+.meal .label .checkbox svg {
   position: absolute;
   left: 35px;
   top: 50%;

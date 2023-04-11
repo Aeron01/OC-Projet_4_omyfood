@@ -48,12 +48,6 @@
   position: relative;
   cursor: pointer;
 }
-.button .gradient_btn a {
-  color: #fff;
-}
-.button .gradient_btn a::before {
-  color: #fff;
-}
 .button .gradient_btn :before {
   position: absolute;
   content: "";

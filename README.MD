@@ -2,7 +2,9 @@
 
 Quatrième projet du parcours "Intérgrateur web" chez OpenClassroom. L'objectif est d'intégrer, puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass.
 
-Vous pouvez retrouver le [brief complet ici](./doc/Brief+créatif+site+Ohmyfood.pdf)
+Vous pouvez retrouver le brief complet [ici](./doc/Brief+créatif+site+Ohmyfood.pdf)
+
+Et la maquette [ici](<https://www.figma.com/file/E4aL7CBi7SPEXhw6JRSQ0t/ARCHIVE-Maquettes-Ohmyfood-(mobile-et-desktop)?node-id=0-1&t=cT4TjKnyMQ5AWsLA-0>)
 
 ![screenshot du site](./src/screenshot.jpg)
 

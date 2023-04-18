@@ -189,8 +189,8 @@ header .nav_arrow {
             transform: translateX(30px);
         }
 
-        &:hover .checkbox svg {
-            transform: translate(-50%, -50%) rotateZ(360deg);
+        &:hover .checkbox .fa-check-circle {
+            transform: translate(-50%, -50%) rotateZ(360deg);    
         }
 
         & .content {
@@ -231,9 +231,9 @@ header .nav_arrow {
             background-color: var(--TertiaryColor-Main);
             color: #fff;
             transform: translateX(100px);
-            transition: 0.3s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+            transition: transform 0.4s cubic-bezier(0.2, 0.5, 0.3, 1.5);
         
-            & svg {
+            & .fa-check-circle {
                 position: absolute;
                 left: 35px;
                 top: 50%;

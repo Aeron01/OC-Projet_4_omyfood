@@ -203,7 +203,7 @@ header .nav_arrow {
 .meal .label:hover .checkbox {
   transform: translateX(30px);
 }
-.meal .label:hover .checkbox svg {
+.meal .label:hover .checkbox .fa-check-circle {
   transform: translate(-50%, -50%) rotateZ(360deg);
 }
 .meal .label .content {
@@ -242,9 +242,9 @@ header .nav_arrow {
   background-color: var(--TertiaryColor-Main);
   color: #fff;
   transform: translateX(100px);
-  transition: 0.3s cubic-bezier(0.2, 0.5, 0.3, 1.5);
+  transition: transform 0.4s cubic-bezier(0.2, 0.5, 0.3, 1.5);
 }
-.meal .label .checkbox svg {
+.meal .label .checkbox .fa-check-circle {
   position: absolute;
   left: 35px;
   top: 50%;

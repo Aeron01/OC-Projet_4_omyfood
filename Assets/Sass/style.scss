@@ -178,12 +178,12 @@ a {
         &:hover {
             background-color: #F5EDFF;
         
-            & svg {
+            & .icon {
                 color: var(--PrimaryColor);
             }
         }
 
-        & svg {
+        & .icon {
             color: #7E7E7E;
         }
     }   

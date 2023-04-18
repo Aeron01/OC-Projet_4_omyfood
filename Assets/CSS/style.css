@@ -41,14 +41,15 @@
   font-size: 16px;
   font-weight: 500;
   font-family: var(--font_text);
-  transition: transform 0.5s cubic-bezier(0.2, -2, 0.8, 2);
+  transition: transform 0.5s cubic-bezier(0.2, -2, 0.8, 2), 0.5s ease-in-out;
   overflow: hidden;
   color: #fff;
   background: linear-gradient(200.64deg, var(--PrimaryColor) -5.2%, var(--SecondaryColor) 110.74%);
   position: relative;
   cursor: pointer;
 }
-.button .gradient_btn :before {
+.button .gradient_btn:before {
+  display: block;
   position: absolute;
   content: "";
   opacity: 0;
@@ -62,8 +63,9 @@
 }
 .button .gradient_btn:hover {
   transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
 }
-.button .gradient_btn:hover > :before {
+.button .gradient_btn:hover:before {
   opacity: 1;
 }
 
@@ -78,15 +80,23 @@
 }
 .like_icon .heart.back {
   color: black;
-}
-.like_icon .heart.front {
-  color: var(--SecondaryColor);
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
+.like_icon .heart.back:hover {
+  opacity: 0;
+}
+.like_icon .heart.front {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 .like_icon .heart.front:hover {
-  color: var(--PrimaryColor);
   opacity: 1;
+  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -139,6 +149,7 @@
   align-items: center;
   position: absolute;
   content: "Nouveau";
+  color: var(--TertiaryColor-Secondary);
   top: 10px;
   right: 10px;
   width: 80px;
@@ -441,10 +452,10 @@ a {
 .container_functioning .functioning_btn:hover {
   background-color: #F5EDFF;
 }
-.container_functioning .functioning_btn:hover svg {
+.container_functioning .functioning_btn:hover .icon {
   color: var(--PrimaryColor);
 }
-.container_functioning .functioning_btn svg {
+.container_functioning .functioning_btn .icon {
   color: #7E7E7E;
 }
 
